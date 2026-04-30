@@ -446,8 +446,7 @@ def build_constraints(draws: list[Draw], digits: int, config: dict[str, Any]) ->
             f1 = sum(1 for d in first_half if d.numbers[pos] == n) / max(1, len(first_half))
             f2 = sum(1 for d in second_half if d.numbers[pos] == n) / max(1, len(second_half))
             momentum.append((pos, n, f2 - f1))  # 正数 = 上升趋势
-        pos_scores = sorted([(n, f2 - f1) for n in range(10) for _, p, f in [("", pos, p2 := sum(1 for d in second_half if d.numbers[pos] == n) / max(1, len(second_half)))] for _, _, f1 in [("", pos, n, sum(1 for d in first_half if d.numbers[pos] == n) / max(1, len(first_half)))]], key=lambda x: -x[1])
-
+       
     constraints["momentum"] = {}
     for pos in range(digits):
         half = len(warm) // 2
