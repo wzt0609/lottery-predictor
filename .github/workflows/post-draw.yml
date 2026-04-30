@@ -1,0 +1,28 @@
+name: ✅ 开奖校验 (21:45 CST)
+
+on:
+  schedule:
+    - cron: '45 13 * * *'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: ✅ 运行开奖校验
+        run: python lottery_predictor.py post-draw
+        timeout-minutes: 30
+      - name: 💾 保存更新后的权重
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add config.json
+          git diff --staged --quiet || git commit -m "自动更新权重 $(date +'%Y-%m-%d')"
+          git push
