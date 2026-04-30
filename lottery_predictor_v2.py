@@ -426,7 +426,7 @@ def predict_v2(config: dict[str, Any]) -> dict[str, Any]:
             "candidates": candidates, "top3": candidates[:3],
             "note": "随机开奖不可预测，本结果仅用于统计记录和复盘。",
         }
-      align_pls_plw_v2(report)
+    align_pls_plw_v2(report)
     save_json(REPORT_DIR / f"prediction-v2-{today}.json", report)
     write_mobile_report_v2(report)
     return report
