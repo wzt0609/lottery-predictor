@@ -1,0 +1,18 @@
+{
+  "predict_time": "20:00",
+  "post_draw_time": "22:00",
+  "timezone_note": "Use GitHub Actions UTC timezone.",
+  "history_limit": 220,
+  "candidate_count": 20,
+  "backtest_window": 60,
+  "request_timeout_seconds": 15,
+  "user_agent": "Mozilla/5.0 (compatible; LotteryPredictor/1.0; +https://github.com/USERNAME/lottery-predictor)",
+  "lotteries": ["fc3d", "pls", "plw"],
+  "weights": {
+    "frequency": 0.34,
+    "recency": 0.28,
+    "omission": 0.22,
+    "transition": 0.16
+  },
+  "signal_weight": 0.18
+}
