@@ -16,10 +16,16 @@ jobs:
       - uses: actions/setup-python@v5
         with:
           python-version: '3.11'
-      - name: 🔮 运行预测
+
+      - name: 🔮 V1 预测（打分法）
         run: python lottery_predictor.py predict
         timeout-minutes: 30
-      - name: 🚀 部署到 Pages
+
+      - name: 🟣 V2 预测（随机采样法）
+        run: python lottery_predictor_v2.py predict
+        timeout-minutes: 30
+
+      - name: 🚀 部署到 GitHub Pages
         uses: peaceiris/actions-gh-pages@v4
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
