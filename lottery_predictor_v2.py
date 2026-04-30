@@ -429,12 +429,15 @@ def build_constraints(draws: list[Draw], digits: int, config: dict[str, Any]) ->
         constraints["pair_freq"] = dict(pair_freq)
         # 高频对
         top_pairs = sorted(pair_freq.items(), key=lambda x: -x[1])[:digits * 10]
-        constraints["top_pairs"] = {
-            (p1, p2): {n1: [n2 for (pp1, pp2, n1_, n2_), cnt in top_pairs if pp1 == p1 and pp2 == p2 and n1_ == n1]
-                       for n1 in range(10)}
-            for p1 in range(digits - 1) for p2 in range(p1 + 1, digits)
-        }
-
+       constraints["top_pairs"] = {}
+    for p1 in range(digits - 1):
+        for p2 in range(p1 + 1, digits):
+            pair_dict: dict[int, list[int]] = {}
+            for n1 in range(10):
+                n2_list = [n2_ for (pp1, pp2, n1__, n2_), cnt in top_pairs if pp1 == p1 and pp2 == p2 and n1__ == n1]
+                if n2_list:
+                    pair_dict[n1] = n2_list
+            constraints["top_pairs"][(p1, p2)] = pair_dict
     # ── 约束7："数字动量"——最近出现频率上升趋势 ──
     momentum = []
     for pos in range(digits):
