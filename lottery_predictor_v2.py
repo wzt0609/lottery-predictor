@@ -426,6 +426,7 @@ def predict_v2(config: dict[str, Any]) -> dict[str, Any]:
             "candidates": candidates, "top3": candidates[:3],
             "note": "随机开奖不可预测，本结果仅用于统计记录和复盘。",
         }
+      align_pls_plw_v2(report)
     save_json(REPORT_DIR / f"prediction-v2-{today}.json", report)
     write_mobile_report_v2(report)
     return report
@@ -498,6 +499,20 @@ def main(argv: list[str] | None = None) -> int:
     elif args.command == "init":
         print(f"Config: {CONFIG_PATH}")
     return 0
-
+def align_pls_plw_v2(report: dict[str, Any]) -> None:
+    pls = report["lotteries"].get("pls")
+    plw = report["lotteries"].get("plw")
+    if not pls or not plw: return
+    pls_heads = [c["number"] for c in pls.get("top3", pls.get("candidates", [])[:3])]
+    if not pls_heads: return
+    aligned, seen = [], set()
+    for head in pls_heads:
+        for c in plw.get("candidates", []):
+            if c["number"].startswith(head) and c["number"] not in seen:
+                aligned.append(c); seen.add(c["number"]); break
+    for c in plw.get("candidates", []):
+        if len(aligned) >= 3: break
+        if c["number"] not in seen: aligned.append(c); seen.add(c["number"])
+    if aligned: plw["top3"] = aligned[:3]
 if __name__ == "__main__":
     raise SystemExit(main())
