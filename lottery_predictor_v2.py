@@ -533,8 +533,7 @@ def write_mobile_report_v2(report: dict[str, Any]) -> None:
     for item in report["lotteries"].values():
         top3 = item.get("top3") or item.get("candidates", [])[:3]
         pills = "\n".join(f'<div class="pick"><span>{html.escape(str(c["number"]))}</span><small>#{c["rank"]} score {c["score"]}</small></div>' for c in top3)
-        trend = html.escape(json.dumps(item.get("trend_summary", {}), ensure_ascii=False))
-        cards.append(f'<section class="card"><div class="meta">{html.escape(str(item.get("latest_issue","")))} / {html.escape(str(item.get("latest_date","")))}</div><h2>{html.escape(str(item["name"]))} <span class="badge-v2">V2</span></h2><div class="picks">{pills}</div><div class="latest">latest: {html.escape(str(item.get("latest_number","")))}</div><details><summary>trend</summary><pre>{trend}</pre></details></section>')
+        cards.append(f'<section class="card"><div class="meta">{html.escape(str(item.get("latest_issue","")))} / {html.escape(str(item.get("latest_date","")))}</div><h2>{html.escape(str(item["name"]))} <span class="badge-v2">V2</span></h2><div class="picks">{pills}</div><div class="latest">上期开奖: {html.escape(str(item.get("latest_number","")))}</div></section>')
 
     doc = f'''<!doctype html>
 <html lang="zh-CN">
