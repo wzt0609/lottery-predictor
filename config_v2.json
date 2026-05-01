@@ -1,0 +1,14 @@
+{
+  "history_limit": 220,
+  "candidate_count": 20,
+  "request_timeout_seconds": 15,
+  "user_agent": "Mozilla/5.0 (compatible; LotteryV2/1.0)",
+  "lotteries": [
+    "fc3d",
+    "pls",
+    "plw"
+  ],
+  "hot_window": 15,
+  "warm_window": 30,
+  "sample_rounds": 10
+}

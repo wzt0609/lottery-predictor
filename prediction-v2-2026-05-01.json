@@ -1,6 +1,6 @@
 {
   "date": "2026-05-01",
-  "created_at": "2026-05-01T19:07:03",
+  "created_at": "2026-05-01T19:25:47",
   "method": "V2-约束筛选+随机采样",
   "lotteries": {
     "fc3d": {
@@ -535,23 +535,23 @@
       "top3": [
         {
           "rank": 1,
-          "number": "81896",
-          "score": 99.99,
-          "sum": 32,
-          "span": 8
+          "number": "71704",
+          "score": 0.0649,
+          "sum": 19,
+          "span": 7
         },
         {
           "rank": 2,
-          "number": "61344",
-          "score": 98.99,
-          "sum": 18,
-          "span": 5
+          "number": "17488",
+          "score": 0.0399,
+          "sum": 28,
+          "span": 7
         },
         {
           "rank": 3,
-          "number": "35088",
-          "score": 97.99,
-          "sum": 24,
+          "number": "00872",
+          "score": 0.03,
+          "sum": 17,
           "span": 8
         }
       ],
