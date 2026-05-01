@@ -2,6 +2,7 @@ name: ✅ 开奖校验 (21:45 CST)
 
 on:
   schedule:
+    # 21:45 CST = 13:45 UTC
     - cron: '45 13 * * *'
   workflow_dispatch:
 
@@ -12,17 +13,40 @@ jobs:
   check:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
-      - uses: actions/setup-python@v5
+      - name: ⬇️ 检出代码（含历史数据）
+        uses: actions/checkout@v4
+        with:
+          ref: main
+
+      - name: 🐍 设置 Python
+        uses: actions/setup-python@v5
         with:
           python-version: '3.11'
+
+      - name: 📦 恢复历史数据缓存
+        uses: actions/cache@v4
+        with:
+          path: data/
+          key: lottery-data-${{ github.run_id }}
+          restore-keys: |
+            lottery-data-
+
+      - name: 📥 拉取最新预测结果
+        run: |
+          git fetch origin gh-pages
+          git checkout origin/gh-pages -- prediction-*.json 2>/dev/null || true
+          mkdir -p reports
+          mv prediction-*.json reports/ 2>/dev/null || true
+
       - name: ✅ 运行开奖校验
         run: python lottery_predictor.py post-draw
         timeout-minutes: 30
-      - name: 💾 保存更新后的权重
+        continue-on-error: true
+
+      - name: 💾 更新配置权重到主分支
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
-          git add config.json
-          git diff --staged --quiet || git commit -m "自动更新权重 $(date +'%Y-%m-%d')"
+          git add config.json data/ 2>/dev/null || true
+          git diff --staged --quiet || git commit -m "自动更新模型权重 $(date +'%Y-%m-%d')"
           git push
