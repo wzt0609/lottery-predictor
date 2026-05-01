@@ -988,21 +988,16 @@ def write_mobile_report(report: dict[str, Any], path: Path) -> None:
     .nav-bar {{ display: flex; background: white; margin: -12px 16px 0; border-radius: 12px; overflow: hidden; box-shadow: 0 1px 3px rgba(0,0,0,.1); }}
     .nav-btn {{ flex: 1; text-align: center; padding: 12px; font-size: 14px; font-weight: 600; color: #6B7280; text-decoration: none; }}
     .nav-btn.active {{ color: #b42318; background: #FFF1F0; }}
-    @media(prefers-color-scheme:dark){{.nav-bar {{ background: #1F2937; }}
-      .nav-btn.active {{ background: #3B1F1E; color: #fca5a5; }}}}
     @media (prefers-color-scheme: dark) {{
       body {{ background: #0f172a; color: #e5e7eb; }}
       .card {{ background: #111827; border-color: #263244; box-shadow: none; }}
       .pick {{ background: #172033; border-color: #334155; }}
       .pick span {{ color: #fca5a5; }}
       .sub, .meta, .latest, details, footer, .pick small {{ color: #94a3b8; }}
+      .nav-bar {{ background: #1F2937; }}
+      .nav-btn.active {{ background: #3B1F1E; color: #fca5a5; }}
     }}
-    .nav-bar { background: #1F2937; }
-      .nav-btn.active { background: #3B1F1E; color: #fca5a5; }
   </style>
-  .nav-bar { display: flex; background: white; margin: -12px 16px 0; border-radius: 12px; overflow: hidden; box-shadow: 0 1px 3px rgba(0,0,0,.1); }
-    .nav-btn { flex: 1; text-align: center; padding: 12px; font-size: 14px; font-weight: 600; color: #6B7280; text-decoration: none; }
-    .nav-btn.active { color: #b42318; background: #FFF1F0; }
 </head>
 <body>
 <div class="nav-bar"><a class="nav-btn active" href="./">V1 打分法</a><a class="nav-btn" href="./v2.html">V2 随机采样</a></div>
