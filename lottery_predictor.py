@@ -985,10 +985,11 @@ def write_mobile_report(report: dict[str, Any], path: Path) -> None:
     details {{ margin-top: 10px; font-size: 12px; color: #475569; }}
     pre {{ white-space: pre-wrap; overflow-wrap: anywhere; }}
     footer {{ padding: 0 16px 22px; color: #7a8699; font-size: 12px; line-height: 1.5; }}
-    .nav-bar{{display:flex;background:white;margin:-12px 16px 0;border-radius:12px;overflow:hidden;box-shadow:0 1px 3px rgba(0,0,0,.1)}}
-    .nav-btn{{flex:1;text-align:center;padding:12px;font-size:14px;font-weight:600;color:#6B7280;text-decoration:none}}
-    .nav-btn.active{{color:#DC2626;background:#FEF2F2}}
-    @media(prefers-color-scheme:dark){{.nav-bar{{background:#1F2937}}.nav-btn.active{{background:#451A1A;color:#FCA5A5}}}}
+    .nav-bar {{ display: flex; background: white; margin: -12px 16px 0; border-radius: 12px; overflow: hidden; box-shadow: 0 1px 3px rgba(0,0,0,.1); }}
+    .nav-btn {{ flex: 1; text-align: center; padding: 12px; font-size: 14px; font-weight: 600; color: #6B7280; text-decoration: none; }}
+    .nav-btn.active {{ color: #b42318; background: #FFF1F0; }}
+    @media(prefers-color-scheme:dark){{.nav-bar {{ background: #1F2937; }}
+      .nav-btn.active {{ background: #3B1F1E; color: #fca5a5; }}}}
     @media (prefers-color-scheme: dark) {{
       body {{ background: #0f172a; color: #e5e7eb; }}
       .card {{ background: #111827; border-color: #263244; box-shadow: none; }}
