@@ -426,10 +426,98 @@ def predict_v2(config: dict[str, Any]) -> dict[str, Any]:
             "candidates": candidates, "top3": candidates[:3],
             "note": "随机开奖不可预测，本结果仅用于统计记录和复盘。",
         }
-    align_pls_plw_v2(report)
     save_json(REPORT_DIR / f"prediction-v2-{today}.json", report)
     write_mobile_report_v2(report)
     return report
+
+
+def evaluate_v2(candidates: list[dict[str, Any]], actual: tuple[int, ...]) -> dict[str, Any]:
+    """Evaluate V2 prediction against actual draw result"""
+    actual_text = "".join(str(x) for x in actual)
+    best = 0
+    exact_rank = None
+    for c in candidates:
+        hits = sum(1 for a, b in zip(c["number"], actual_text) if a == b)
+        best = max(best, hits)
+        if c["number"] == actual_text:
+            exact_rank = c["rank"]
+    return {"actual": actual_text, "best_position_hits": best, "exact_rank": exact_rank}
+
+def optimize_config_v2(history: list[dict[str, Any]], config: dict[str, Any]) -> dict[str, Any]:
+    """基于历史复盘数据动态调整 V2 约束参数"""
+    if not history:
+        return config
+    # 从最近10次复盘中统计命中率
+    recent = history[-10:]
+    total_hits = sum(1 for r in recent if r.get("best_hits", 0) >= 2)
+    exact_count = sum(1 for r in recent if r.get("exact_rank") is not None)
+    # 如果近期命中率高，保持或收紧约束；低则放宽
+    updated = dict(config)
+    if total_hits >= 3 or exact_count >= 1:
+        # 表现好：收紧采样范围，提高精准度
+        updated["hot_window"] = min(int(config.get("hot_window", 15)) + 2, 25)
+        updated["sample_rounds"] = min(int(config.get("sample_rounds", 10)) + 1, 15)
+    elif total_hits <= 1:
+        # 表现差：放宽约束
+        updated["hot_window"] = max(int(config.get("hot_window", 15)) - 2, 8)
+        updated["warm_window"] = max(int(config.get("warm_window", 30)) - 3, 20)
+        updated["sample_rounds"] = max(int(config.get("sample_rounds", 10)) - 1, 5)
+    # 确保在合理范围内
+    updated["hot_window"] = max(5, min(updated["hot_window"], 30))
+    updated["warm_window"] = max(15, min(updated["warm_window"], 60))
+    updated["sample_rounds"] = max(3, min(updated["sample_rounds"], 20))
+    return updated
+
+def post_draw_v2(config: dict[str, Any]) -> dict[str, Any]:
+    """V2 开奖后复盘：评估预测 + 自动优化约束参数"""
+    today = dt.datetime.now().strftime("%Y-%m-%d")
+    pred_path = REPORT_DIR / f"prediction-v2-{today}.json"
+    if not pred_path.exists():
+        # 没有今天预测，先跑一次预测
+        predict_v2(config)
+    previous = json.loads(pred_path.read_text(encoding="utf-8")) if pred_path.exists() else predict_v2(config)
+    review: dict[str, Any] = {"date": today, "created_at": dt.datetime.now().isoformat(timespec="seconds"), "results": {}}
+    for key in config["lotteries"]:
+        draws, source = collect_lottery(key, config)
+        spec = LOTTERIES[key]
+        latest = draws[-1] if draws else None
+        candidates = previous["lotteries"].get(key, {}).get("candidates", [])
+        evaluation = evaluate_v2(candidates, latest.numbers) if latest and candidates else {}
+        review["results"][key] = {
+            "name": spec["name"], "source": source,
+            "latest_issue": latest.issue if latest else None,
+            "latest_date": latest.date if latest else None,
+            "latest_number": "".join(str(x) for x in latest.numbers) if latest else None,
+            "evaluation": evaluation,
+        }
+    # 加载历史复盘记录并优化配置
+    history_path = REPORT_DIR / "v2_review_history.json"
+    history: list[dict[str, Any]] = []
+    if history_path.exists():
+        try:
+            history = json.loads(history_path.read_text(encoding="utf-8"))
+        except (json.JSONDecodeError, ValueError):
+            history = []
+    # 提取命中统计
+    for rk, rv in review["results"].items():
+        ev = rv.get("evaluation", {})
+        history.append({
+            "date": today, "lottery": rk,
+            "actual": ev.get("actual", ""),
+            "best_hits": ev.get("best_position_hits", 0),
+            "exact_rank": ev.get("exact_rank"),
+        })
+    save_json(history_path, history[-50:])  # 保留最近50条
+    # 自动优化 V2 配置
+    updated_config = optimize_config_v2(history, config)
+    save_json(CONFIG_PATH, updated_config)
+    review["config_updates"] = {
+        "hot_window": updated_config.get("hot_window"),
+        "warm_window": updated_config.get("warm_window"),
+        "sample_rounds": updated_config.get("sample_rounds"),
+    }
+    save_json(REPORT_DIR / f"post-draw-v2-{today}.json", review)
+    return review
 
 
 def mean(vals: list[int]) -> float:
@@ -485,7 +573,7 @@ footer{{padding:0 16px 22px;color:#7a8699;font-size:12px;line-height:1.5}}
 
 def main(argv: list[str] | None = None) -> int:
     parser = argparse.ArgumentParser(description="Lottery Predictor V2")
-    parser.add_argument("command", choices=["predict", "collect", "init"])
+    parser.add_argument("command", choices=["predict", "collect", "post-draw", "init"])
     args = parser.parse_args(argv)
     config = load_config()
     DATA_DIR.mkdir(exist_ok=True); REPORT_DIR.mkdir(exist_ok=True)
@@ -496,25 +584,13 @@ def main(argv: list[str] | None = None) -> int:
         for k in config["lotteries"]:
             d, s = collect_lottery(k, config)
             print(f"{LOTTERIES[k]['name']}: {len(d)} draws from {s}")
+    elif args.command == "post-draw":
+        r = post_draw_v2(config)
+        print(f"V2 post-draw OK: {r['date']} -> {REPORT_DIR}")
+        print(f"Config updates: {json.dumps(r.get('config_updates', {}), ensure_ascii=False)}")
     elif args.command == "init":
         print(f"Config: {CONFIG_PATH}")
     return 0
-def align_pls_plw_v2(report: dict[str, Any]) -> None:
-    pls = report["lotteries"].get("pls")
-    plw = report["lotteries"].get("plw")
-    if not pls or not plw: return
-    pls_heads = [c["number"] for c in pls.get("top3", pls.get("candidates", [])[:3])]
-    if not pls_heads: return
-    
-    rng_seed = report.get("date", "today") + "_plw_align"
-    rng = random.Random(rng_seed)
-    
-    aligned = []
-    for i, head in enumerate(pls_heads):
-        last2 = "".join(str(rng.randint(0, 9)) for _ in range(2))
-        full = head + last2
-        aligned.append({"rank": i+1, "number": full, "score": 99.99 - i, "sum": sum(int(x) for x in full), "span": max(int(x) for x in full)-min(int(x) for x in full)})
-    
-    plw["top3"] = aligned
+
 if __name__ == "__main__":
     raise SystemExit(main())
