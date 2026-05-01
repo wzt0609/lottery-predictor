@@ -555,6 +555,12 @@ def candidate_score(numbers: tuple[int, ...], stats: list[list[float]], draws: l
         score += trend_shape_bonus(numbers, recent)
     if signal:
         score += signal_bonus(numbers, signal)
+        danma = signal.get("danma")
+        if danma:
+            score += danma_bonus(numbers, danma)
+        zimi_nums = signal.get("zimi_numbers")
+        if zimi_nums:
+            score += zimi_bonus(numbers, zimi_nums)
     repeat_penalty = len(numbers) - len(set(numbers))
     return score - repeat_penalty * 0.08
 
@@ -688,12 +694,19 @@ def parse_17500_signals(text: str, weight: float) -> dict[str, dict[str, Any]]:
         label_pos = clean.find(label)
         if label_pos < 0:
             continue
-        block = clean[label_pos : label_pos + 900]
+        block = clean[label_pos : label_pos + 1200]
         issue_match = re.search(r"第\s*(\d+)\s*期", block)
         draw_match = re.search(rf"开奖[^0-9]*((?:\d\s*){{{digits}}})", block)
         machine_match = re.search(rf"开机号[:：]?\s*((?:\d\s*){{{digits}}})", block)
         test_match = re.search(rf"试机号[:：]?\s*((?:\d\s*){{{digits}}})", block)
         focus_match = re.search(rf"关注码[:：]?\s*((?:\d\s*){{{digits}}})", block)
+        # 胆码图：独胆、双胆、三胆
+        dudan_match = re.search(r"独胆[:：]?\s*(\d)", block)
+        shuangdan_match = re.search(r"双胆[:：]?\s*(\d\s*\d)", block)
+        sandan_match = re.search(r"三胆[:：]?\s*(\d\s*\d\s*\d)", block)
+        danma_match = re.search(r"胆码[:：]?\s*((?:\d\s*){{1,{}}})".format(digits), block)
+        # 字谜
+        zimi_match = re.search(r"字谜[:：]?\s*(.+?)(?:$|\s{2,}|[，。；])", block)
         signal = {
             "source": "https://www.17500.cn/",
             "issue_hint": issue_match.group(1) if issue_match else "",
@@ -709,9 +722,48 @@ def parse_17500_signals(text: str, weight: float) -> dict[str, dict[str, Any]]:
                 parsed = parse_digits(match.group(1), digits)
                 if parsed:
                     signal[field] = parsed
-        if any(field in signal for field in ["machine_number", "test_number", "focus_number"]):
+        # 胆码收集
+        danma_digits: list[int] = []
+        for m in [dudan_match, shuangdan_match, sandan_match, danma_match]:
+            if m:
+                parsed = parse_digits(m.group(1), digits)
+                if parsed:
+                    danma_digits.extend(list(parsed))
+        if danma_digits:
+            # Deduplicate while preserving order
+            seen_d = set()
+            unique_danma = []
+            for d in danma_digits:
+                if d not in seen_d:
+                    seen_d.add(d)
+                    unique_danma.append(d)
+            signal["danma"] = tuple(unique_danma[:digits])
+        # 字谜文本
+        if zimi_match:
+            zimi_text = zimi_match.group(1).strip()
+            if len(zimi_text) >= 2:
+                signal["zimi"] = zimi_text
+                # 从字谜中提取可能的数字提示
+                zimi_numbers = re.findall(r"\d", zimi_text)
+                if zimi_numbers:
+                    signal["zimi_numbers"] = tuple(int(x) for x in zimi_numbers[:digits])
+        if any(field in signal for field in ["machine_number", "test_number", "focus_number", "danma", "zimi"]):
             signals[key] = signal
     return signals
+
+def danma_bonus(numbers: tuple[int, ...], danma: tuple[int, ...]) -> float:
+    """胆码命中加分：号码中包含胆码的位越多，分数越高"""
+    if not danma:
+        return 0.0
+    overlap = len(set(numbers) & set(danma))
+    return overlap * 0.08
+
+def zimi_bonus(numbers: tuple[int, ...], zimi_numbers: tuple[int, ...]) -> float:
+    """字谜数字命中加分"""
+    if not zimi_numbers:
+        return 0.0
+    overlap = len(set(numbers) & set(zimi_numbers))
+    return overlap * 0.04
 
 
 def signal_for_report(signal: dict[str, Any] | None) -> dict[str, Any]:
@@ -722,6 +774,26 @@ def signal_for_report(signal: dict[str, Any] | None) -> dict[str, Any]:
         if isinstance(value, tuple):
             result[key] = "".join(str(x) for x in value)
     return result
+
+def signal_html(signal: dict[str, Any] | None) -> str:
+    """Generate compact HTML summary of pre-draw signals for mobile page"""
+    if not signal:
+        return ""
+    parts = []
+    if signal.get("test_number"):
+        parts.append(f"试机号: {''.join(str(x) for x in signal['test_number'])}")
+    if signal.get("machine_number"):
+        parts.append(f"开机号: {''.join(str(x) for x in signal['machine_number'])}")
+    if signal.get("danma"):
+        parts.append(f"胆码: {''.join(str(x) for x in signal['danma'])}")
+    if signal.get("zimi"):
+        zimi_text = html.escape(signal["zimi"])
+        parts.append(f"字谜: {zimi_text}")
+    if signal.get("zimi_numbers"):
+        parts.append(f"字谜数字: {''.join(str(x) for x in signal['zimi_numbers'])}")
+    if not parts:
+        return ""
+    return " · ".join(parts)
 
 
 def gaussian_bonus(value: float, avg: float, sd: float) -> float:
@@ -810,12 +882,23 @@ def optimize_weights(draws: list[Draw], digits: int, config: dict[str, Any]) -> 
         return config["weights"]
     if len(draws) < 30:
         return config["weights"]
+    # Expanded grid: 15 weight combinations covering frequency/recency/omission/transition extremes
     grids = [
         {"frequency": 0.42, "recency": 0.24, "omission": 0.20, "transition": 0.14},
         {"frequency": 0.34, "recency": 0.28, "omission": 0.22, "transition": 0.16},
         {"frequency": 0.28, "recency": 0.36, "omission": 0.22, "transition": 0.14},
         {"frequency": 0.30, "recency": 0.24, "omission": 0.32, "transition": 0.14},
         {"frequency": 0.30, "recency": 0.24, "omission": 0.18, "transition": 0.28},
+        {"frequency": 0.25, "recency": 0.25, "omission": 0.25, "transition": 0.25},
+        {"frequency": 0.40, "recency": 0.30, "omission": 0.16, "transition": 0.14},
+        {"frequency": 0.22, "recency": 0.42, "omission": 0.22, "transition": 0.14},
+        {"frequency": 0.20, "recency": 0.18, "omission": 0.48, "transition": 0.14},
+        {"frequency": 0.18, "recency": 0.18, "omission": 0.18, "transition": 0.46},
+        {"frequency": 0.36, "recency": 0.26, "omission": 0.24, "transition": 0.14},
+        {"frequency": 0.32, "recency": 0.32, "omission": 0.20, "transition": 0.16},
+        {"frequency": 0.26, "recency": 0.34, "omission": 0.24, "transition": 0.16},
+        {"frequency": 0.28, "recency": 0.22, "omission": 0.36, "transition": 0.14},
+        {"frequency": 0.24, "recency": 0.26, "omission": 0.20, "transition": 0.30},
     ]
     max_window = 24 if digits >= 5 else int(config["backtest_window"])
     window = min(max_window, len(draws) - 10)
@@ -953,6 +1036,7 @@ def write_mobile_report(report: dict[str, Any], path: Path) -> None:
               <div class="picks">{pills}</div>
               <div class="latest">data source: {html.escape(str(item.get("source", "")))}</div>
               <div class="latest">latest draw: {html.escape(str(item.get("latest_number", "")))}</div>
+              <div class="signals">{signal_html(item.get("pre_draw_signals"))}</div>
               <details><summary>machine/test/focus</summary><pre>{pre_draw}</pre></details>
               <details><summary>trend summary</summary><pre>{trend}</pre></details>
             </section>
@@ -982,6 +1066,7 @@ def write_mobile_report(report: dict[str, Any], path: Path) -> None:
     .pick span {{ display: block; font-size: 25px; font-weight: 800; letter-spacing: 2px; color: #b42318; overflow-wrap: anywhere; }}
     .pick small {{ display: block; margin-top: 4px; font-size: 10px; color: #64748b; }}
     .latest {{ margin-top: 12px; color: #475569; font-size: 13px; }}
+    .signals {{ margin-top: 6px; color: #8B5CF6; font-size: 12px; line-height: 1.5; }}
     details {{ margin-top: 10px; font-size: 12px; color: #475569; }}
     pre {{ white-space: pre-wrap; overflow-wrap: anywhere; }}
     footer {{ padding: 0 16px 22px; color: #7a8699; font-size: 12px; line-height: 1.5; }}
