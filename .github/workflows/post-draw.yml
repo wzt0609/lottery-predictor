@@ -1,4 +1,4 @@
-name: ✅ 开奖校验 (21:45 CST)
+name: ✅ 开奖校验 V1+V2 (21:45 CST)
 
 on:
   schedule:
@@ -31,22 +31,27 @@ jobs:
           restore-keys: |
             lottery-data-
 
-      - name: 📥 拉取最新预测结果
+      - name: 📥 拉取最新预测结果 (V1+V2)
         run: |
           git fetch origin gh-pages
           git checkout origin/gh-pages -- prediction-*.json 2>/dev/null || true
           mkdir -p reports
           mv prediction-*.json reports/ 2>/dev/null || true
 
-      - name: ✅ 运行开奖校验
+      - name: 🔴 V1 开奖校验
         run: python lottery_predictor.py post-draw
         timeout-minutes: 30
         continue-on-error: true
 
-      - name: 💾 更新配置权重到主分支
+      - name: 🟣 V2 开奖校验 + 约束优化
+        run: python lottery_predictor_v2.py post-draw
+        timeout-minutes: 30
+        continue-on-error: true
+
+      - name: 💾 保存优化结果到主分支
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
-          git add config.json data/ 2>/dev/null || true
-          git diff --staged --quiet || git commit -m "自动更新模型权重 $(date +'%Y-%m-%d')"
+          git add config.json config_v2.json data/ data_v2/ 2>/dev/null || true
+          git diff --staged --quiet || git commit -m "自动更新模型参数 V1+V2 $(date +'%Y-%m-%d')"
           git push
