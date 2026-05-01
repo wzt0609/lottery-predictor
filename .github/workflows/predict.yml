@@ -2,6 +2,7 @@ name: 📊 每日预测 (20:00 CST)
 
 on:
   schedule:
+    # 20:00 CST = 12:00 UTC
     - cron: '0 12 * * *'
   workflow_dispatch:
 
@@ -20,10 +21,24 @@ jobs:
       - name: 🔮 V1 预测（打分法）
         run: python lottery_predictor.py predict
         timeout-minutes: 30
+        continue-on-error: true
 
       - name: 🟣 V2 预测（随机采样法）
         run: python lottery_predictor_v2.py predict
         timeout-minutes: 30
+        continue-on-error: true
+
+      - name: 📄 输出预测摘要
+        run: |
+          echo "## ✅ V1 预测" >> $GITHUB_STEP_SUMMARY
+          if ls reports/prediction-*.md 1>/dev/null 2>&1; then
+            cat reports/prediction-*.md >> $GITHUB_STEP_SUMMARY
+          else
+            echo "V1 未产生报告" >> $GITHUB_STEP_SUMMARY
+          fi
+          echo "" >> $GITHUB_STEP_SUMMARY
+          echo "## ✅ V2 预测" >> $GITHUB_STEP_SUMMARY
+          ls -la reports/ >> $GITHUB_STEP_SUMMARY
 
       - name: 🚀 部署到 GitHub Pages
         uses: peaceiris/actions-gh-pages@v4
@@ -32,3 +47,4 @@ jobs:
           publish_dir: ./reports
           publish_branch: gh-pages
           keep_files: false
+          full_commit_message: "每日预测更新 V1+V2 $(date +'%Y-%m-%d %H:%M')"
