@@ -705,8 +705,8 @@ def parse_17500_signals(text: str, weight: float) -> dict[str, dict[str, Any]]:
         shuangdan_match = re.search(r"双胆[:：]?\s*(\d\s*\d)", block)
         sandan_match = re.search(r"三胆[:：]?\s*(\d\s*\d\s*\d)", block)
         danma_match = re.search(r"胆码[:：]?\s*((?:\d\s*){{1,{}}})".format(digits), block)
-        # 字谜
-        zimi_match = re.search(r"字谜[:：]?\s*(.+?)(?:$|\s{2,}|[，。；])", block)
+        # 字谜：只取紧跟在"字谜"后的短句（最多40字），避免抓取整个导航栏
+        zimi_match = re.search(r"字谜[:：]?\s*([\w一-鿿\d\s，,。.]{1,40})", block)
         signal = {
             "source": "https://www.17500.cn/",
             "issue_hint": issue_match.group(1) if issue_match else "",
@@ -741,7 +741,10 @@ def parse_17500_signals(text: str, weight: float) -> dict[str, dict[str, Any]]:
         # 字谜文本
         if zimi_match:
             zimi_text = zimi_match.group(1).strip()
-            if len(zimi_text) >= 2:
+            # 过滤掉导航栏/菜单文本（包含走势图、工具、缩水、计算器、选号等导航词）
+            nav_keywords = ["走势图", "缩水", "计算器", "选号", "工具", "分析", "模拟", "分布图", "折线图", "热门", "遗漏", "过滤器"]
+            is_nav = any(kw in zimi_text for kw in nav_keywords)
+            if len(zimi_text) >= 2 and not is_nav:
                 signal["zimi"] = zimi_text
                 # 从字谜中提取可能的数字提示
                 zimi_numbers = re.findall(r"\d", zimi_text)
@@ -1026,19 +1029,13 @@ def write_mobile_report(report: dict[str, Any], path: Path) -> None:
             f'<div class="pick"><span>{html.escape(str(c["number"]))}</span><small>#{c["rank"]} score {c["score"]}</small></div>'
             for c in top3
         )
-        trend = html.escape(json.dumps(item.get("trend_summary", {}), ensure_ascii=False))
-        pre_draw = html.escape(json.dumps(item.get("pre_draw_signals", {}), ensure_ascii=False))
         cards.append(
             f"""
             <section class="card">
               <div class="meta">{html.escape(str(item.get("latest_issue", "")))} / {html.escape(str(item.get("latest_date", "")))}</div>
               <h2>{html.escape(str(item["name"]))}</h2>
               <div class="picks">{pills}</div>
-              <div class="latest">data source: {html.escape(str(item.get("source", "")))}</div>
-              <div class="latest">latest draw: {html.escape(str(item.get("latest_number", "")))}</div>
-              <div class="signals">{signal_html(item.get("pre_draw_signals"))}</div>
-              <details><summary>machine/test/focus</summary><pre>{pre_draw}</pre></details>
-              <details><summary>trend summary</summary><pre>{trend}</pre></details>
+              <div class="latest">上期开奖: {html.escape(str(item.get("latest_number", "")))}</div>
             </section>
             """
         )
