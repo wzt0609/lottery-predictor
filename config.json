@@ -7,7 +7,11 @@
   "backtest_window": 60,
   "request_timeout_seconds": 15,
   "user_agent": "Mozilla/5.0 (compatible; LotteryPredictor/1.0; +https://github.com/USERNAME/lottery-predictor)",
-  "lotteries": ["fc3d", "pls", "plw"],
+  "lotteries": [
+    "fc3d",
+    "pls",
+    "plw"
+  ],
   "weights": {
     "frequency": 0.34,
     "recency": 0.28,
