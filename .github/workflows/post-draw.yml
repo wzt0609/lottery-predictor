@@ -1,9 +1,8 @@
-name: ✅ 开奖校验 V1+V2 (21:45 CST)
+name: ✅ 自动校验 V1+V2 (每30分钟)
 
 on:
   schedule:
-    # 21:45 CST = 13:45 UTC
-    - cron: '45 13 * * *'
+    - cron: '*/30 * * * *'
   workflow_dispatch:
 
 permissions:
