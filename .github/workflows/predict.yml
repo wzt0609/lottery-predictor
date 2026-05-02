@@ -1,9 +1,10 @@
-name: 📊 每日预测 (20:00 CST)
+name: 📊 自动预测 (每30分钟)
 
 on:
   schedule:
-    # 20:00 CST = 12:00 UTC
-    - cron: '0 12 * * *'
+    - cron: '*/30 * * * *'
+  push:
+    branches: [ main ]
   workflow_dispatch:
 
 permissions:
