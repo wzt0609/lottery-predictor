@@ -38,6 +38,10 @@ DATA_DIR = ROOT / "data_v2"
 REPORT_DIR = ROOT / "reports"
 CONFIG_PATH = ROOT / "config_v2.json"
 
+# Keep network fetches direct. This avoids long proxy auto-detection pauses in
+# Windows and makes GitHub Actions runs finish much faster.
+URL_OPENER = urllib.request.build_opener(urllib.request.ProxyHandler({}))
+
 LOTTERIES = {
     "fc3d": {
         "name": "中国福利彩票 3D", "digits": 3,
@@ -67,7 +71,7 @@ LOTTERIES = {
 
 DEFAULT_CONFIG = {
     "history_limit": 220, "candidate_count": 20,
-    "request_timeout_seconds": 15,
+    "request_timeout_seconds": 8,
     "user_agent": "Mozilla/5.0 (compatible; LotteryV2/1.0)",
     "lotteries": ["fc3d", "pls", "plw"],
     "hot_window": 15, "warm_window": 30, "sample_rounds": 10,
@@ -122,7 +126,7 @@ def save_json(path: Path, payload: Any) -> None:
 
 def fetch_text(url: str, timeout: int, ua: str) -> str:
     req = urllib.request.Request(url, headers={"User-Agent": ua, "Referer": urllib.parse.urljoin(url, "/"), "Accept": "text/html,application/json;q=0.9,*/*;q=0.8"})
-    with urllib.request.urlopen(req, timeout=timeout) as resp:
+    with URL_OPENER.open(req, timeout=timeout) as resp:
         raw = resp.read()
         ct = resp.headers.get("Content-Type","")
         enc = "utf-8"
@@ -378,9 +382,10 @@ def sample_candidates(draws: list[Draw], digits: int, cons: dict[str, Any],
     total = sum(weights)
     if total > 0: weights = [w / total for w in weights]
 
+    shortlist_target = max(count * 4, count)
     chosen, seen = [], set()
-    for r in range(config["sample_rounds"] * 2):
-        if len(chosen) >= count: break
+    for r in range(config["sample_rounds"] * 4):
+        if len(chosen) >= shortlist_target: break
         rng = random.Random(seed + f"_r{r}")
         idx = rng.choices(range(len(pool)), weights=weights, k=1)[0]
         comb = pool[idx]
@@ -388,7 +393,48 @@ def sample_candidates(draws: list[Draw], digits: int, cons: dict[str, Any],
         if ns in seen: continue
         seen.add(ns)
         chosen.append({"rank": len(chosen)+1, "number": ns, "score": round(weights[idx]*1000, 4), "sum": sum(comb), "span": max(comb)-min(comb)})
-    return chosen[:count]
+    return diversify_candidates(chosen, count)
+
+
+def diversify_candidates(candidates: list[dict[str, Any]], count: int) -> list[dict[str, Any]]:
+    """Select a compact top list with less clustering than pure weighted sampling.
+
+    This repository is intentionally different from lottery-ai-top3: V2 keeps the
+    constraint-sampling idea, then re-ranks the sampled shortlist so the three
+    public picks cover different sums, spans, and digit shapes.
+    """
+    if len(candidates) <= count:
+        return candidates
+
+    selected: list[dict[str, Any]] = []
+    remaining = [dict(item) for item in candidates]
+    while remaining and len(selected) < count:
+        best_index = 0
+        best_score = -1e9
+        for idx, item in enumerate(remaining):
+            number = str(item["number"])
+            base = float(item.get("score", 0.0))
+            if not selected:
+                diversity = 0.0
+            else:
+                distances = []
+                for picked in selected:
+                    picked_number = str(picked["number"])
+                    pos_distance = sum(a != b for a, b in zip(number, picked_number))
+                    sum_distance = abs(int(item.get("sum", 0)) - int(picked.get("sum", 0))) / 10.0
+                    span_distance = abs(int(item.get("span", 0)) - int(picked.get("span", 0))) / 4.0
+                    distances.append(pos_distance + sum_distance + span_distance)
+                diversity = min(distances)
+            combined = base + diversity * 0.55
+            if combined > best_score:
+                best_index = idx
+                best_score = combined
+        selected.append(remaining.pop(best_index))
+
+    for rank, item in enumerate(selected, start=1):
+        item["rank"] = rank
+        item["selection_note"] = "constraint_sample_diversified"
+    return selected
 
 
 def analyze_trend_v2(draws: list[Draw]) -> dict[str, Any]:

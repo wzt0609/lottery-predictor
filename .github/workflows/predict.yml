@@ -1,51 +1,72 @@
-name: 📊 自动预测 (每30分钟)
+name: Lottery Predictor Refresh
 
 on:
   schedule:
-    - cron: '*/30 * * * *'
-  push:
-    branches: [ main ]
+    # Refresh every 10 minutes. GitHub uses UTC; the script uses TZ below.
+    - cron: "*/10 * * * *"
   workflow_dispatch:
+  push:
+    branches: [main]
 
 permissions:
   contents: write
 
+concurrency:
+  group: lottery-predictor-refresh
+  cancel-in-progress: false
+
 jobs:
-  predict:
+  refresh:
     runs-on: ubuntu-latest
+    env:
+      TZ: Asia/Shanghai
     steps:
-      - uses: actions/checkout@v4
-      - uses: actions/setup-python@v5
+      - name: Check out repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
         with:
-          python-version: '3.11'
+          python-version: "3.11"
 
-      - name: 🔮 V1 预测（打分法）
+      - name: Run V1 stable scoring
         run: python lottery_predictor.py predict
-        timeout-minutes: 30
-        continue-on-error: true
+        timeout-minutes: 8
 
-      - name: 🟣 V2 预测（随机采样法）
+      - name: Run V2 constraint sampling
         run: python lottery_predictor_v2.py predict
-        timeout-minutes: 30
-        continue-on-error: true
+        timeout-minutes: 8
 
-      - name: 📄 输出预测摘要
+      - name: Run post-draw review after 22:00 Beijing time
+        shell: bash
         run: |
-          echo "## ✅ V1 预测" >> $GITHUB_STEP_SUMMARY
-          if ls reports/prediction-*.md 1>/dev/null 2>&1; then
-            cat reports/prediction-*.md >> $GITHUB_STEP_SUMMARY
+          hour="$(date +%H)"
+          if [ "$hour" -ge 22 ]; then
+            python lottery_predictor.py post-draw
+            python lottery_predictor_v2.py post-draw
           else
-            echo "V1 未产生报告" >> $GITHUB_STEP_SUMMARY
+            echo "Before 22:00 Beijing time; prediction refresh only."
           fi
-          echo "" >> $GITHUB_STEP_SUMMARY
-          echo "## ✅ V2 预测" >> $GITHUB_STEP_SUMMARY
-          ls -la reports/ >> $GITHUB_STEP_SUMMARY
+        timeout-minutes: 10
 
-      - name: 🚀 部署到 GitHub Pages
+      - name: Commit data and reports to main
+        shell: bash
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add config.json config_v2.json data data_v2 reports
+          if git diff --cached --quiet; then
+            echo "No generated changes to commit."
+          else
+            git commit -m "Update lottery predictor reports"
+            git push
+          fi
+
+      - name: Publish reports to GitHub Pages
         uses: peaceiris/actions-gh-pages@v4
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_dir: ./reports
           publish_branch: gh-pages
           keep_files: false
-          full_commit_message: "每日预测更新 V1+V2 $(date +'%Y-%m-%d %H:%M')"
+          full_commit_message: "Publish lottery predictor reports"

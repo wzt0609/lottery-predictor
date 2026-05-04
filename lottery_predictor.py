@@ -39,6 +39,10 @@ DATA_DIR = ROOT / "data"
 REPORT_DIR = ROOT / "reports"
 CONFIG_PATH = ROOT / "config.json"
 
+# Avoid slow system proxy auto-detection in Windows/GitHub runners.  The public
+# lottery sources used here are direct HTTPS/HTTP endpoints.
+URL_OPENER = urllib.request.build_opener(urllib.request.ProxyHandler({}))
+
 
 LOTTERIES = {
     "fc3d": {
@@ -232,7 +236,7 @@ def fetch_text(url: str, timeout: int, user_agent: str) -> str:
             "Accept": "text/html,application/json;q=0.9,*/*;q=0.8",
         },
     )
-    with urllib.request.urlopen(request, timeout=timeout) as response:
+    with URL_OPENER.open(request, timeout=timeout) as response:
         raw = response.read()
         content_type = response.headers.get("Content-Type", "")
         encoding = "utf-8"

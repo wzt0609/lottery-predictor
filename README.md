@@ -1,22 +1,35 @@
-# 彩票数据预测系统
+# Lottery Predictor
 
-基于统计分析的彩票数据预测工具，支持福彩3D、排列三、排列五。
+This repository is the **experimental comparison version** of `lottery-ai-top3`.
 
-## 运行方式
+It keeps two parallel methods:
+
+- **V1 stable scoring**: frequency, recency, omission, transition, trend shape, and weak pre-draw signals.
+- **V2 constraint sampling**: active digit zones, sum/span/odd-big constraints, momentum pairs, weighted sampling, and diversified top-3 selection.
+
+`lottery-ai-top3` focuses on multi-model ensemble and rolling model-weight backtests. This repository deliberately keeps a different mechanism so the two projects can be compared instead of becoming copies of each other.
+
+## Cloud Refresh
+
+GitHub Actions runs every 10 minutes.
+
+- Before 22:00 Beijing time: refresh predictions.
+- After 22:00 Beijing time: refresh predictions and run post-draw review.
+- Generated reports are published to the `gh-pages` branch.
+
+## Mobile Page
+
+After GitHub Pages is enabled, open:
+
+`https://wzt0609.github.io/lottery-predictor/`
+
+## Local Commands
 
 ```bash
-python lottery_predictor.py predict   # 生成预测
-python lottery_predictor.py post-draw # 开奖后校验
+python lottery_predictor.py predict
+python lottery_predictor_v2.py predict
+python lottery_predictor.py post-draw
+python lottery_predictor_v2.py post-draw
 ```
 
-## GitHub Actions 自动运行
-
-- 每天 **20:00 CST** (12:00 UTC) → 自动预测
-- 每天 **21:45 CST** (13:45 UTC) → 自动校验
-- 结果自动部署到 GitHub Pages
-
-## 手机查看
-
-部署完成后，访问 `https://你的用户名.github.io/lottery-predictor/`
-
-⚠️ 彩票具有随机性，以上仅供娱乐参考，请理性购彩。
+Lottery draws are random. These reports are for statistical logging and entertainment only, not guaranteed winning numbers or investment advice.
