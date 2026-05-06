@@ -2,11 +2,10 @@ name: Lottery Predictor Refresh
 
 on:
   schedule:
-    # Refresh every 10 minutes. GitHub uses UTC; the script uses TZ below.
-    - cron: "*/10 * * * *"
+    # Refresh every 20 minutes, offset from busy GitHub schedule times.
+    # GitHub uses UTC; the script uses TZ below.
+    - cron: "3,23,43 * * * *"
   workflow_dispatch:
-  push:
-    branches: [main]
 
 permissions:
   contents: write
@@ -18,11 +17,14 @@ concurrency:
 jobs:
   refresh:
     runs-on: ubuntu-latest
+    timeout-minutes: 18
     env:
       TZ: Asia/Shanghai
     steps:
       - name: Check out repository
         uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
 
       - name: Set up Python
         uses: actions/setup-python@v5
@@ -59,6 +61,7 @@ jobs:
             echo "No generated changes to commit."
           else
             git commit -m "Update lottery predictor reports"
+            git pull --rebase origin main
             git push
           fi
 
