@@ -5,7 +5,7 @@
 ## 中国福利彩票 3D
 - 最高评分 3 码：329、328、621
 - 数据来源：https://touch.17500.cn/award/history/lotid/3d.html
-- 开机/试机/关注码：{"source": "https://www.17500.cn/", "issue_hint": "118", "draw_number": "119", "machine_number": "102", "test_number": "150", "focus_number": "206"}
+- 开机/试机/关注码：{"source": "https://www.17500.cn/", "issue_hint": "119", "draw_number": "119", "machine_number": "102", "test_number": "150", "focus_number": "206"}
 - 历史期数：27
 - 最新开奖：2026118 / 2026-05-08 / 132
 - 权重：{"frequency": 0.34, "recency": 0.28, "omission": 0.22, "transition": 0.16}
@@ -37,7 +37,7 @@
 ## 中国体育彩票 排列三
 - 最高评分 3 码：055、925、325
 - 数据来源：https://touch.17500.cn/award/history/lotid/pl3.html
-- 开机/试机/关注码：{"source": "https://www.17500.cn/", "issue_hint": "118", "draw_number": "119", "machine_number": "102", "test_number": "150", "focus_number": "206"}
+- 开机/试机/关注码：{"source": "https://www.17500.cn/", "issue_hint": "119", "draw_number": "119", "machine_number": "102", "test_number": "150", "focus_number": "206"}
 - 历史期数：27
 - 最新开奖：2026118 / 2026-05-08 / 272
 - 权重：{"frequency": 0.34, "recency": 0.28, "omission": 0.22, "transition": 0.16}
@@ -69,7 +69,7 @@
 ## 中国体育彩票 排列五
 - 最高评分 3 码：05513、92513、32519
 - 数据来源：https://touch.17500.cn/award/history/lotid/pl5.html
-- 开机/试机/关注码：{"source": "https://www.17500.cn/", "issue_hint": "118", "machine_number": "10211", "test_number": "15011", "focus_number": "20611"}
+- 开机/试机/关注码：{"source": "https://www.17500.cn/", "issue_hint": "119", "machine_number": "10211", "test_number": "15011", "focus_number": "20612"}
 - 历史期数：27
 - 最新开奖：2026118 / 2026-05-08 / 27231
 - 权重：{"frequency": 0.34, "recency": 0.28, "omission": 0.22, "transition": 0.16}
@@ -80,7 +80,7 @@
 | 1 | 92513 | -7.88957 | 20 | 8 |
 | 2 | 95413 | -8.403973 | 22 | 8 |
 | 3 | 05513 | -8.464787 | 14 | 5 |
-| 4 | 95512 | -8.556038 | 22 | 8 |
+| 4 | 95512 | -8.517158 | 22 | 8 |
 | 5 | 95523 | -8.749505 | 24 | 7 |
 | 6 | 35813 | -8.923083 | 20 | 7 |
 | 7 | 29513 | -8.955461 | 20 | 8 |
@@ -93,7 +93,7 @@
 | 14 | 25519 | -9.346472 | 22 | 8 |
 | 15 | 64513 | -9.392183 | 19 | 5 |
 | 16 | 94813 | -9.440187 | 25 | 8 |
-| 17 | 39512 | -9.503841 | 20 | 8 |
+| 17 | 39512 | -9.464961 | 20 | 8 |
 | 18 | 04519 | -9.506268 | 19 | 9 |
-| 19 | 65713 | -9.516732 | 22 | 6 |
-| 20 | 94510 | -9.539033 | 19 | 9 |
+| 19 | 92522 | -9.507582 | 20 | 7 |
+| 20 | 65713 | -9.516732 | 22 | 6 |
