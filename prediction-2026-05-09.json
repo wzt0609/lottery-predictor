@@ -1,6 +1,6 @@
 {
   "date": "2026-05-09",
-  "created_at": "2026-05-09T18:36:54",
+  "created_at": "2026-05-09T22:35:11",
   "lotteries": {
     "fc3d": {
       "name": "中国福利彩票 3D",
@@ -40,7 +40,7 @@
       },
       "pre_draw_signals": {
         "source": "https://www.17500.cn/",
-        "issue_hint": "118",
+        "issue_hint": "119",
         "draw_number": "119",
         "machine_number": "102",
         "test_number": "150",
@@ -251,7 +251,7 @@
       },
       "pre_draw_signals": {
         "source": "https://www.17500.cn/",
-        "issue_hint": "118",
+        "issue_hint": "119",
         "draw_number": "119",
         "machine_number": "102",
         "test_number": "150",
@@ -462,10 +462,10 @@
       },
       "pre_draw_signals": {
         "source": "https://www.17500.cn/",
-        "issue_hint": "118",
+        "issue_hint": "119",
         "machine_number": "10211",
         "test_number": "15011",
-        "focus_number": "20611"
+        "focus_number": "20612"
       },
       "candidates": [
         {
@@ -492,7 +492,7 @@
         {
           "rank": 4,
           "number": "95512",
-          "score": -8.556038,
+          "score": -8.517158,
           "sum": 22,
           "span": 8
         },
@@ -583,7 +583,7 @@
         {
           "rank": 17,
           "number": "39512",
-          "score": -9.503841,
+          "score": -9.464961,
           "sum": 20,
           "span": 8
         },
@@ -596,17 +596,17 @@
         },
         {
           "rank": 19,
+          "number": "92522",
+          "score": -9.507582,
+          "sum": 20,
+          "span": 7
+        },
+        {
+          "rank": 20,
           "number": "65713",
           "score": -9.516732,
           "sum": 22,
           "span": 6
-        },
-        {
-          "rank": 20,
-          "number": "94510",
-          "score": -9.539033,
-          "sum": 19,
-          "span": 9
         }
       ],
       "top3": [
