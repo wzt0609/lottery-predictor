@@ -40,5 +40,26 @@
     "actual": "27231",
     "best_hits": 2,
     "exact_rank": null
+  },
+  {
+    "date": "2026-05-10",
+    "lottery": "fc3d",
+    "actual": "112",
+    "best_hits": 1,
+    "exact_rank": null
+  },
+  {
+    "date": "2026-05-10",
+    "lottery": "pls",
+    "actual": "222",
+    "best_hits": 1,
+    "exact_rank": null
+  },
+  {
+    "date": "2026-05-10",
+    "lottery": "plw",
+    "actual": "22219",
+    "best_hits": 2,
+    "exact_rank": null
   }
 ]
