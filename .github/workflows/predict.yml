@@ -32,7 +32,7 @@ jobs:
           python-version: "3.11"
 
       - name: Run V1 stable scoring
-        run: python lottery_predictor.py predict
+        run: python lottery_predictor.py quick
         timeout-minutes: 8
 
       - name: Run V2 constraint sampling

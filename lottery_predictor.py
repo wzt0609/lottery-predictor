@@ -120,7 +120,7 @@ DEFAULT_CONFIG = {
     "timezone_note": "Use the host machine local timezone.",
     "history_limit": 220,
     "candidate_count": 20,
-    "backtest_window": 60,
+    "backtest_window": 18,
     "request_timeout_seconds": 8,
     "user_agent": "Mozilla/5.0 lottery-statistics-bot/1.0",
     "lotteries": ["fc3d", "pls", "plw"],
@@ -889,7 +889,8 @@ def optimize_weights(draws: list[Draw], digits: int, config: dict[str, Any]) -> 
         return config["weights"]
     if len(draws) < 30:
         return config["weights"]
-    # Expanded grid: 15 weight combinations covering frequency/recency/omission/transition extremes
+    # Keep the grid compact enough for unattended GitHub runs. The full
+    # historical walk-forward search is too slow for a 20-minute schedule.
     grids = [
         {"frequency": 0.42, "recency": 0.24, "omission": 0.20, "transition": 0.14},
         {"frequency": 0.34, "recency": 0.28, "omission": 0.22, "transition": 0.16},
@@ -897,17 +898,8 @@ def optimize_weights(draws: list[Draw], digits: int, config: dict[str, Any]) -> 
         {"frequency": 0.30, "recency": 0.24, "omission": 0.32, "transition": 0.14},
         {"frequency": 0.30, "recency": 0.24, "omission": 0.18, "transition": 0.28},
         {"frequency": 0.25, "recency": 0.25, "omission": 0.25, "transition": 0.25},
-        {"frequency": 0.40, "recency": 0.30, "omission": 0.16, "transition": 0.14},
-        {"frequency": 0.22, "recency": 0.42, "omission": 0.22, "transition": 0.14},
-        {"frequency": 0.20, "recency": 0.18, "omission": 0.48, "transition": 0.14},
-        {"frequency": 0.18, "recency": 0.18, "omission": 0.18, "transition": 0.46},
-        {"frequency": 0.36, "recency": 0.26, "omission": 0.24, "transition": 0.14},
-        {"frequency": 0.32, "recency": 0.32, "omission": 0.20, "transition": 0.16},
-        {"frequency": 0.26, "recency": 0.34, "omission": 0.24, "transition": 0.16},
-        {"frequency": 0.28, "recency": 0.22, "omission": 0.36, "transition": 0.14},
-        {"frequency": 0.24, "recency": 0.26, "omission": 0.20, "transition": 0.30},
     ]
-    max_window = 24 if digits >= 5 else int(config["backtest_window"])
+    max_window = 12 if digits >= 5 else int(config["backtest_window"])
     window = min(max_window, len(draws) - 10)
     test_draws = draws[-window:]
     best_score = -1.0
@@ -976,13 +968,15 @@ def post_draw(config: dict[str, Any]) -> dict[str, Any]:
     previous = json.loads(prediction_path.read_text(encoding="utf-8")) if prediction_path.exists() else predict(config)
     review: dict[str, Any] = {"date": today, "created_at": dt.datetime.now().isoformat(timespec="seconds"), "results": {}}
     updated_config = dict(config)
+    review_config = dict(config)
+    review_config["fast"] = True
     for key in config["lotteries"]:
         draws, source = collect_lottery(key, config)
         spec = LOTTERIES[key]
         latest = draws[-1]
         candidates = previous["lotteries"].get(key, {}).get("candidates", [])
         evaluation = evaluate_prediction(candidates, latest.numbers) if candidates else {}
-        optimized = optimize_weights(draws, spec["digits"], config)
+        optimized = optimize_weights(draws, spec["digits"], review_config)
         review["results"][key] = {
             "name": spec["name"],
             "source": source,
