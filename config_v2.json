@@ -8,7 +8,7 @@
     "pls",
     "plw"
   ],
-  "hot_window": 21,
+  "hot_window": 23,
   "warm_window": 27,
   "sample_rounds": 15
 }
