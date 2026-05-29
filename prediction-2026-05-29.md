@@ -5,7 +5,7 @@
 ## 中国福利彩票 3D
 - 最高评分 3 码：384、070、084
 - 数据来源：https://touch.17500.cn/award/history/lotid/3d.html
-- 开机/试机/关注码：{"source": "https://www.17500.cn/", "issue_hint": "138", "draw_number": "139", "machine_number": "323", "test_number": "233", "focus_number": "860"}
+- 开机/试机/关注码：{"source": "https://www.17500.cn/", "issue_hint": "139", "draw_number": "139", "machine_number": "323", "test_number": "233", "focus_number": "860"}
 - 历史期数：47
 - 最新开奖：2026138 / 2026-05-28 / 790
 - 权重：{"frequency": 0.34, "recency": 0.28, "omission": 0.22, "transition": 0.16}
@@ -27,7 +27,7 @@
 ## 中国体育彩票 排列三
 - 最高评分 3 码：943、247、945
 - 数据来源：https://touch.17500.cn/award/history/lotid/pl3.html
-- 开机/试机/关注码：{"source": "https://www.17500.cn/", "issue_hint": "138", "draw_number": "139", "machine_number": "323", "test_number": "233", "focus_number": "860"}
+- 开机/试机/关注码：{"source": "https://www.17500.cn/", "issue_hint": "139", "draw_number": "139", "machine_number": "323", "test_number": "233", "focus_number": "860"}
 - 历史期数：47
 - 最新开奖：2026138 / 2026-05-28 / 263
 - 权重：{"frequency": 0.34, "recency": 0.28, "omission": 0.22, "transition": 0.16}
@@ -49,7 +49,7 @@
 ## 中国体育彩票 排列五
 - 最高评分 3 码：94333、24733、94531
 - 数据来源：https://touch.17500.cn/award/history/lotid/pl5.html
-- 开机/试机/关注码：{"source": "https://www.17500.cn/", "issue_hint": "138", "machine_number": "32313", "test_number": "23313", "focus_number": "86013"}
+- 开机/试机/关注码：{"source": "https://www.17500.cn/", "issue_hint": "139", "machine_number": "32313", "test_number": "23313", "focus_number": "86014"}
 - 历史期数：47
 - 最新开奖：2026138 / 2026-05-28 / 26356
 - 权重：{"frequency": 0.34, "recency": 0.28, "omission": 0.22, "transition": 0.16}
@@ -57,13 +57,13 @@
 
 | 排名 | 号码 | 分数 | 和值 | 跨度 |
 |---:|---:|---:|---:|---:|
-| 1 | 94333 | -7.950035 | 22 | 6 |
-| 2 | 94723 | -8.216703 | 25 | 7 |
-| 3 | 24733 | -8.220905 | 19 | 5 |
+| 1 | 94333 | -7.988915 | 22 | 6 |
+| 2 | 94723 | -8.255583 | 25 | 7 |
+| 3 | 24733 | -8.259785 | 19 | 5 |
 | 4 | 94531 | -8.478755 | 22 | 8 |
 | 5 | 94321 | -8.552764 | 19 | 8 |
-| 6 | 94513 | -8.596692 | 22 | 8 |
-| 7 | 24673 | -8.752887 | 22 | 5 |
-| 8 | 04573 | -8.756448 | 19 | 7 |
-| 9 | 04633 | -8.988862 | 16 | 6 |
-| 10 | 94273 | -8.99817 | 25 | 7 |
+| 6 | 94513 | -8.635572 | 22 | 8 |
+| 7 | 24673 | -8.791767 | 22 | 5 |
+| 8 | 04573 | -8.795328 | 19 | 7 |
+| 9 | 04736 | -9.027547 | 20 | 7 |
+| 10 | 04633 | -9.027742 | 16 | 6 |
