@@ -166,5 +166,26 @@
     "actual": "19811",
     "best_hits": 2,
     "exact_rank": null
+  },
+  {
+    "date": "2026-05-30",
+    "lottery": "fc3d",
+    "actual": "346",
+    "best_hits": 1,
+    "exact_rank": null
+  },
+  {
+    "date": "2026-05-30",
+    "lottery": "pls",
+    "actual": "198",
+    "best_hits": 1,
+    "exact_rank": null
+  },
+  {
+    "date": "2026-05-30",
+    "lottery": "plw",
+    "actual": "19811",
+    "best_hits": 2,
+    "exact_rank": null
   }
 ]
