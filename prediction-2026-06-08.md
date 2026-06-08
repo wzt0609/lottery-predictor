@@ -5,7 +5,7 @@
 ## 中国福利彩票 3D
 - 最高评分 3 码：276、780、286
 - 数据来源：https://touch.17500.cn/award/history/lotid/3d.html
-- 开机/试机/关注码：{"source": "https://www.17500.cn/", "issue_hint": "148", "draw_number": "149", "machine_number": "508", "test_number": "012", "focus_number": "356"}
+- 开机/试机/关注码：{"source": "https://www.17500.cn/", "issue_hint": "149", "draw_number": "149", "machine_number": "508", "test_number": "012", "focus_number": "356"}
 - 历史期数：57
 - 最新开奖：2026148 / 2026-06-07 / 408
 - 权重：{"frequency": 0.34, "recency": 0.28, "omission": 0.22, "transition": 0.16}
@@ -27,7 +27,7 @@
 ## 中国体育彩票 排列三
 - 最高评分 3 码：247、347、943
 - 数据来源：https://touch.17500.cn/award/history/lotid/pl3.html
-- 开机/试机/关注码：{"source": "https://www.17500.cn/", "issue_hint": "148", "draw_number": "149", "machine_number": "508", "test_number": "012", "focus_number": "356"}
+- 开机/试机/关注码：{"source": "https://www.17500.cn/", "issue_hint": "149", "draw_number": "149", "machine_number": "508", "test_number": "012", "focus_number": "356"}
 - 历史期数：57
 - 最新开奖：2026148 / 2026-06-07 / 065
 - 权重：{"frequency": 0.34, "recency": 0.28, "omission": 0.22, "transition": 0.16}
@@ -49,7 +49,7 @@
 ## 中国体育彩票 排列五
 - 最高评分 3 码：94713、94612、29713
 - 数据来源：https://touch.17500.cn/award/history/lotid/pl5.html
-- 开机/试机/关注码：{"source": "https://www.17500.cn/", "issue_hint": "148", "machine_number": "50814", "test_number": "01214", "focus_number": "35614"}
+- 开机/试机/关注码：{"source": "https://www.17500.cn/", "issue_hint": "149", "machine_number": "50814", "test_number": "01214", "focus_number": "35615"}
 - 历史期数：57
 - 最新开奖：2026148 / 2026-06-07 / 06562
 - 权重：{"frequency": 0.34, "recency": 0.28, "omission": 0.22, "transition": 0.16}
@@ -57,13 +57,13 @@
 
 | 排名 | 号码 | 分数 | 和值 | 跨度 |
 |---:|---:|---:|---:|---:|
-| 1 | 94713 | -8.476823 | 24 | 8 |
-| 2 | 94612 | -8.603617 | 22 | 8 |
+| 1 | 94713 | -8.487623 | 24 | 8 |
+| 2 | 94612 | -8.614417 | 22 | 8 |
 | 3 | 29713 | -8.641053 | 22 | 8 |
-| 4 | 94623 | -8.824464 | 24 | 7 |
-| 5 | 94732 | -9.064086 | 25 | 7 |
-| 6 | 29614 | -9.153829 | 22 | 8 |
-| 7 | 94721 | -9.174075 | 23 | 8 |
+| 4 | 94623 | -8.835264 | 24 | 7 |
+| 5 | 94732 | -9.074886 | 25 | 7 |
+| 6 | 29611 | -9.174683 | 19 | 8 |
+| 7 | 94721 | -9.184875 | 23 | 8 |
 | 8 | 39712 | -9.243886 | 22 | 8 |
 | 9 | 39613 | -9.259679 | 22 | 8 |
-| 10 | 94511 | -9.295245 | 20 | 8 |
+| 10 | 94511 | -9.306045 | 20 | 8 |
