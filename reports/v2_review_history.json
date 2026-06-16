@@ -1,26 +1,5 @@
 [
   {
-    "date": "2026-05-17",
-    "lottery": "pls",
-    "actual": "835",
-    "best_hits": 2,
-    "exact_rank": null
-  },
-  {
-    "date": "2026-05-17",
-    "lottery": "plw",
-    "actual": "83526",
-    "best_hits": 3,
-    "exact_rank": null
-  },
-  {
-    "date": "2026-05-23",
-    "lottery": "fc3d",
-    "actual": "756",
-    "best_hits": 2,
-    "exact_rank": null
-  },
-  {
     "date": "2026-05-23",
     "lottery": "pls",
     "actual": "443",
@@ -347,6 +326,27 @@
     "lottery": "plw",
     "actual": "47386",
     "best_hits": 3,
+    "exact_rank": null
+  },
+  {
+    "date": "2026-06-16",
+    "lottery": "fc3d",
+    "actual": "162",
+    "best_hits": 2,
+    "exact_rank": null
+  },
+  {
+    "date": "2026-06-16",
+    "lottery": "pls",
+    "actual": "641",
+    "best_hits": 1,
+    "exact_rank": null
+  },
+  {
+    "date": "2026-06-16",
+    "lottery": "plw",
+    "actual": "64170",
+    "best_hits": 1,
     "exact_rank": null
   }
 ]
