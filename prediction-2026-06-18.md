@@ -5,7 +5,7 @@
 ## 中国福利彩票 3D
 - 最高评分 3 码：726、716、376
 - 数据来源：https://touch.17500.cn/award/history/lotid/3d.html
-- 开机/试机/关注码：{"source": "https://www.17500.cn/", "issue_hint": "158", "draw_number": "159", "machine_number": "160", "test_number": "508", "focus_number": "507"}
+- 开机/试机/关注码：{"source": "https://www.17500.cn/", "issue_hint": "159", "draw_number": "159", "machine_number": "160", "test_number": "508", "focus_number": "507"}
 - 历史期数：67
 - 最新开奖：2026158 / 2026-06-17 / 178
 - 权重：{"frequency": 0.34, "recency": 0.28, "omission": 0.22, "transition": 0.16}
@@ -27,7 +27,7 @@
 ## 中国体育彩票 排列三
 - 最高评分 3 码：943、945、245
 - 数据来源：https://touch.17500.cn/award/history/lotid/pl3.html
-- 开机/试机/关注码：{"source": "https://www.17500.cn/", "issue_hint": "158", "draw_number": "159", "machine_number": "160", "test_number": "508", "focus_number": "507"}
+- 开机/试机/关注码：{"source": "https://www.17500.cn/", "issue_hint": "159", "draw_number": "159", "machine_number": "160", "test_number": "508", "focus_number": "507"}
 - 历史期数：67
 - 最新开奖：2026158 / 2026-06-17 / 911
 - 权重：{"frequency": 0.34, "recency": 0.28, "omission": 0.22, "transition": 0.16}
@@ -49,7 +49,7 @@
 ## 中国体育彩票 排列五
 - 最高评分 3 码：94318、94513、94531
 - 数据来源：https://touch.17500.cn/award/history/lotid/pl5.html
-- 开机/试机/关注码：{"source": "https://www.17500.cn/", "issue_hint": "158", "machine_number": "16015", "test_number": "50815", "focus_number": "50715"}
+- 开机/试机/关注码：{"source": "https://www.17500.cn/", "issue_hint": "159", "machine_number": "16015", "test_number": "50815", "focus_number": "50716"}
 - 历史期数：67
 - 最新开奖：2026158 / 2026-06-17 / 91133
 - 权重：{"frequency": 0.34, "recency": 0.28, "omission": 0.22, "transition": 0.16}
@@ -59,11 +59,11 @@
 |---:|---:|---:|---:|---:|
 | 1 | 94513 | -9.370954 | 22 | 8 |
 | 2 | 94531 | -9.380688 | 22 | 8 |
-| 3 | 94611 | -9.835985 | 21 | 8 |
+| 3 | 94611 | -9.825185 | 21 | 8 |
 | 4 | 94318 | -9.853501 | 25 | 8 |
 | 5 | 94321 | -9.8906 | 19 | 8 |
 | 6 | 94522 | -10.016619 | 22 | 7 |
 | 7 | 44518 | -10.019216 | 22 | 7 |
-| 8 | 94623 | -10.094021 | 24 | 7 |
+| 8 | 94623 | -10.083221 | 24 | 7 |
 | 9 | 94333 | -10.113144 | 22 | 6 |
 | 10 | 98311 | -10.127722 | 22 | 8 |
