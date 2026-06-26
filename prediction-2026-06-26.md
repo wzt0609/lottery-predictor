@@ -5,9 +5,9 @@
 ## 中国福利彩票 3D
 - 最高评分 3 码：384、276、386
 - 数据来源：https://touch.17500.cn/award/history/lotid/3d.html
-- 开机/试机/关注码：{"source": "https://www.17500.cn/", "issue_hint": "166", "draw_number": "167", "machine_number": "999", "test_number": "638", "focus_number": "407"}
+- 开机/试机/关注码：{"source": "https://www.17500.cn/", "issue_hint": "167", "draw_number": "167", "machine_number": "999", "test_number": "638", "focus_number": "407"}
 - 历史期数：75
-- 最新开奖：2026166 / 2026-06-25 / 900
+- 最新开奖：2026166 / 2026-06-26 / 900
 - 权重：{"frequency": 0.34, "recency": 0.28, "omission": 0.22, "transition": 0.16}
 - 近期开奖形态：{"recent_window": 30, "sum_avg": 14.4, "sum_last": 9, "span_avg": 5.2, "span_last": 9, "most_common_odd_count": 2, "most_common_big_count": 2, "hot_sum_tails": [[6, 5], [5, 4], [9, 4]]}
 
@@ -27,9 +27,9 @@
 ## 中国体育彩票 排列三
 - 最高评分 3 码：943、946、916
 - 数据来源：https://touch.17500.cn/award/history/lotid/pl3.html
-- 开机/试机/关注码：{"source": "https://www.17500.cn/", "issue_hint": "166", "draw_number": "167", "machine_number": "999", "test_number": "638", "focus_number": "407"}
+- 开机/试机/关注码：{"source": "https://www.17500.cn/", "issue_hint": "167", "draw_number": "167", "machine_number": "999", "test_number": "638", "focus_number": "407"}
 - 历史期数：75
-- 最新开奖：2026166 / 2026-06-25 / 229
+- 最新开奖：2026166 / 2026-06-26 / 229
 - 权重：{"frequency": 0.34, "recency": 0.28, "omission": 0.22, "transition": 0.16}
 - 近期开奖形态：{"recent_window": 30, "sum_avg": 13.23, "sum_last": 13, "span_avg": 5.03, "span_last": 7, "most_common_odd_count": 1, "most_common_big_count": 1, "hot_sum_tails": [[1, 7], [3, 5], [7, 5]]}
 
@@ -49,9 +49,9 @@
 ## 中国体育彩票 排列五
 - 最高评分 3 码：94333、94613、91633
 - 数据来源：https://touch.17500.cn/award/history/lotid/pl5.html
-- 开机/试机/关注码：{"source": "https://www.17500.cn/", "issue_hint": "166", "machine_number": "99916", "test_number": "63816", "focus_number": "40716"}
+- 开机/试机/关注码：{"source": "https://www.17500.cn/", "issue_hint": "167", "machine_number": "99916", "test_number": "63816", "focus_number": "40716"}
 - 历史期数：75
-- 最新开奖：2026166 / 2026-06-25 / 22950
+- 最新开奖：2026166 / 2026-06-26 / 22950
 - 权重：{"frequency": 0.34, "recency": 0.28, "omission": 0.22, "transition": 0.16}
 - 近期开奖形态：{"recent_window": 30, "sum_avg": 21.9, "sum_last": 18, "span_avg": 6.43, "span_last": 9, "most_common_odd_count": 2, "most_common_big_count": 3, "hot_sum_tails": [[8, 8], [2, 5], [3, 4]]}
 
