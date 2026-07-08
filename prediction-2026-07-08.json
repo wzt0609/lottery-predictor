@@ -1,6 +1,6 @@
 {
   "date": "2026-07-08",
-  "created_at": "2026-07-08T19:31:18",
+  "created_at": "2026-07-08T21:15:06",
   "lotteries": {
     "fc3d": {
       "name": "中国福利彩票 3D",
@@ -325,7 +325,7 @@
         "issue_hint": "178",
         "machine_number": "09817",
         "test_number": "28317",
-        "focus_number": "84617"
+        "focus_number": "84618"
       },
       "candidates": [
         {
@@ -337,22 +337,22 @@
         },
         {
           "rank": 2,
+          "number": "91318",
+          "score": -9.474653,
+          "sum": 22,
+          "span": 8
+        },
+        {
+          "rank": 3,
           "number": "96312",
           "score": -9.510233,
           "sum": 21,
           "span": 8
         },
         {
-          "rank": 3,
-          "number": "91318",
-          "score": -9.513533,
-          "sum": 22,
-          "span": 8
-        },
-        {
           "rank": 4,
           "number": "81373",
-          "score": -9.57558,
+          "score": -9.58638,
           "sum": 22,
           "span": 7
         },
@@ -366,7 +366,7 @@
         {
           "rank": 6,
           "number": "91372",
-          "score": -9.713269,
+          "score": -9.724069,
           "sum": 22,
           "span": 8
         },
@@ -379,29 +379,29 @@
         },
         {
           "rank": 8,
+          "number": "46318",
+          "score": -9.854952,
+          "sum": 22,
+          "span": 7
+        },
+        {
+          "rank": 9,
           "number": "95313",
           "score": -9.885428,
           "sum": 21,
           "span": 8
         },
         {
-          "rank": 9,
-          "number": "46318",
-          "score": -9.893832,
-          "sum": 22,
-          "span": 7
-        },
-        {
           "rank": 10,
           "number": "86371",
-          "score": -9.908963,
+          "score": -9.919763,
           "sum": 25,
           "span": 7
         }
       ],
       "top3": [
         {
-          "rank": 2,
+          "rank": 3,
           "number": "96312",
           "score": -9.510233,
           "sum": 21,
@@ -415,9 +415,9 @@
           "span": 7
         },
         {
-          "rank": 3,
+          "rank": 2,
           "number": "91318",
-          "score": -9.513533,
+          "score": -9.474653,
           "sum": 22,
           "span": 8
         }
