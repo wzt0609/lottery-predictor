@@ -26,7 +26,7 @@
 
 ## 中国体育彩票 排列三
 - 最高评分 3 码：945、944、943
-- 数据来源：https://touch.17500.cn/award/history/lotid/pl3.html
+- 数据来源：local-cache
 - 开机/试机/关注码：{"source": "https://www.17500.cn/", "issue_hint": "182", "draw_number": "182", "machine_number": "945", "test_number": "087", "focus_number": "108"}
 - 历史期数：91
 - 最新开奖：2026182 / 2026-07-11 / 313
