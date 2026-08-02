@@ -14,27 +14,6 @@
     "exact_rank": null
   },
   {
-    "date": "2026-07-21",
-    "lottery": "fc3d",
-    "actual": "906",
-    "best_hits": 2,
-    "exact_rank": null
-  },
-  {
-    "date": "2026-07-21",
-    "lottery": "pls",
-    "actual": "069",
-    "best_hits": 2,
-    "exact_rank": null
-  },
-  {
-    "date": "2026-07-21",
-    "lottery": "plw",
-    "actual": "06989",
-    "best_hits": 1,
-    "exact_rank": null
-  },
-  {
     "date": "2026-07-22",
     "lottery": "fc3d",
     "actual": "425",
@@ -346,6 +325,27 @@
     "date": "2026-08-01",
     "lottery": "plw",
     "actual": "96170",
+    "best_hits": 2,
+    "exact_rank": null
+  },
+  {
+    "date": "2026-08-02",
+    "lottery": "fc3d",
+    "actual": "435",
+    "best_hits": 2,
+    "exact_rank": null
+  },
+  {
+    "date": "2026-08-02",
+    "lottery": "pls",
+    "actual": "135",
+    "best_hits": 1,
+    "exact_rank": null
+  },
+  {
+    "date": "2026-08-02",
+    "lottery": "plw",
+    "actual": "13568",
     "best_hits": 2,
     "exact_rank": null
   }
