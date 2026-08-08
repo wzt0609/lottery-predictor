@@ -4,7 +4,7 @@
 
 ## 中国福利彩票 3D
 - 最高评分 3 码：285、485、625
-- 数据来源：https://touch.17500.cn/award/history/lotid/3d.html
+- 数据来源：local-cache
 - 开机/试机/关注码：{"source": "https://www.17500.cn/", "issue_hint": "210", "draw_number": "210", "machine_number": "603", "test_number": "090", "focus_number": "578"}
 - 历史期数：119
 - 最新开奖：2026210 / 2026-08-08 / 755
