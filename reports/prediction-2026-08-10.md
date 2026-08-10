@@ -48,7 +48,7 @@
 
 ## 中国体育彩票 排列五
 - 最高评分 3 码：25671、26570、24571
-- 数据来源：local-cache
+- 数据来源：https://touch.17500.cn/award/history/lotid/pl5.html
 - 开机/试机/关注码：{"source": "https://www.17500.cn/", "issue_hint": "212", "machine_number": "87421", "test_number": "57621", "focus_number": "91321"}
 - 历史期数：120
 - 最新开奖：2026211 / 2026-08-09 / 51543
