@@ -5,7 +5,7 @@
 ## 中国福利彩票 3D
 - 最高评分 3 码：925、528、525
 - 数据来源：https://touch.17500.cn/award/history/lotid/3d.html
-- 开机/试机/关注码：{"source": "https://www.17500.cn/", "issue_hint": "213", "draw_number": "214", "machine_number": "948", "test_number": "758", "focus_number": "917"}
+- 开机/试机/关注码：{"source": "https://www.17500.cn/", "issue_hint": "214", "draw_number": "214", "machine_number": "948", "test_number": "758", "focus_number": "917"}
 - 历史期数：122
 - 最新开奖：2026213 / 2026-08-11 / 872
 - 权重：{"frequency": 0.34, "recency": 0.28, "omission": 0.22, "transition": 0.16}
@@ -27,7 +27,7 @@
 ## 中国体育彩票 排列三
 - 最高评分 3 码：265、256、257
 - 数据来源：https://touch.17500.cn/award/history/lotid/pl3.html
-- 开机/试机/关注码：{"source": "https://www.17500.cn/", "issue_hint": "213", "draw_number": "214", "machine_number": "948", "test_number": "758", "focus_number": "917"}
+- 开机/试机/关注码：{"source": "https://www.17500.cn/", "issue_hint": "214", "draw_number": "214", "machine_number": "948", "test_number": "758", "focus_number": "917"}
 - 历史期数：122
 - 最新开奖：2026213 / 2026-08-11 / 740
 - 权重：{"frequency": 0.34, "recency": 0.28, "omission": 0.22, "transition": 0.16}
@@ -49,7 +49,7 @@
 ## 中国体育彩票 排列五
 - 最高评分 3 码：26573、25673、25871
 - 数据来源：https://touch.17500.cn/award/history/lotid/pl5.html
-- 开机/试机/关注码：{"source": "https://www.17500.cn/", "issue_hint": "213", "machine_number": "94821", "test_number": "75821", "focus_number": "91721"}
+- 开机/试机/关注码：{"source": "https://www.17500.cn/", "issue_hint": "214", "machine_number": "94821", "test_number": "75821", "focus_number": "91721"}
 - 历史期数：122
 - 最新开奖：2026213 / 2026-08-11 / 74071
 - 权重：{"frequency": 0.34, "recency": 0.28, "omission": 0.22, "transition": 0.16}
