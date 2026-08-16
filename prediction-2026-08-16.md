@@ -48,7 +48,7 @@
 
 ## 中国体育彩票 排列五
 - 最高评分 3 码：71640、91643、31670
-- 数据来源：https://touch.17500.cn/award/history/lotid/pl5.html
+- 数据来源：local-cache
 - 开机/试机/关注码：{"source": "https://www.17500.cn/", "issue_hint": "218", "machine_number": "99821", "test_number": "51921", "focus_number": "57021"}
 - 历史期数：126
 - 最新开奖：2026217 / 2026-08-15 / 01966
