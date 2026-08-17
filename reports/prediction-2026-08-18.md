@@ -4,7 +4,7 @@
 
 ## 中国福利彩票 3D
 - 最高评分 3 码：285、482、472
-- 数据来源：local-cache
+- 数据来源：https://touch.17500.cn/award/history/lotid/3d.html
 - 开机/试机/关注码：{"source": "https://www.17500.cn/", "issue_hint": "219", "draw_number": "219", "machine_number": "085", "test_number": "597", "focus_number": "047"}
 - 历史期数：128
 - 最新开奖：2026219 / 2026-08-17 / 225
@@ -26,7 +26,7 @@
 
 ## 中国体育彩票 排列三
 - 最高评分 3 码：065、265、066
-- 数据来源：local-cache
+- 数据来源：https://touch.17500.cn/award/history/lotid/pl3.html
 - 开机/试机/关注码：{"source": "https://www.17500.cn/", "issue_hint": "219", "draw_number": "219", "machine_number": "085", "test_number": "597", "focus_number": "047"}
 - 历史期数：128
 - 最新开奖：2026219 / 2026-08-17 / 662
