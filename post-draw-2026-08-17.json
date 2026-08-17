@@ -1,0 +1,60 @@
+{
+  "date": "2026-08-17",
+  "created_at": "2026-08-17T22:37:30",
+  "results": {
+    "fc3d": {
+      "name": "中国福利彩票 3D",
+      "source": "https://touch.17500.cn/award/history/lotid/3d.html",
+      "latest_issue": "2026218",
+      "latest_date": "2026-08-16",
+      "latest_number": "382",
+      "evaluation": {
+        "actual": "382",
+        "best_position_hits": 1,
+        "exact_rank": null
+      },
+      "next_weights": {
+        "frequency": 0.34,
+        "recency": 0.28,
+        "omission": 0.22,
+        "transition": 0.16
+      }
+    },
+    "pls": {
+      "name": "中国体育彩票 排列三",
+      "source": "https://touch.17500.cn/award/history/lotid/pl3.html",
+      "latest_issue": "2026218",
+      "latest_date": "2026-08-16",
+      "latest_number": "079",
+      "evaluation": {
+        "actual": "079",
+        "best_position_hits": 1,
+        "exact_rank": null
+      },
+      "next_weights": {
+        "frequency": 0.34,
+        "recency": 0.28,
+        "omission": 0.22,
+        "transition": 0.16
+      }
+    },
+    "plw": {
+      "name": "中国体育彩票 排列五",
+      "source": "https://touch.17500.cn/award/history/lotid/pl5.html",
+      "latest_issue": "2026218",
+      "latest_date": "2026-08-16",
+      "latest_number": "07950",
+      "evaluation": {
+        "actual": "07950",
+        "best_position_hits": 1,
+        "exact_rank": null
+      },
+      "next_weights": {
+        "frequency": 0.34,
+        "recency": 0.28,
+        "omission": 0.22,
+        "transition": 0.16
+      }
+    }
+  }
+}
