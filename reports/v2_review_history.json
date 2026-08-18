@@ -14,338 +14,338 @@
     "exact_rank": null
   },
   {
-    "date": "2026-08-12",
+    "date": "2026-08-13",
     "lottery": "fc3d",
-    "actual": "872",
+    "actual": "545",
     "best_hits": 2,
     "exact_rank": null
   },
   {
-    "date": "2026-08-12",
+    "date": "2026-08-13",
     "lottery": "pls",
-    "actual": "740",
+    "actual": "014",
+    "best_hits": 2,
+    "exact_rank": null
+  },
+  {
+    "date": "2026-08-13",
+    "lottery": "plw",
+    "actual": "01490",
+    "best_hits": 2,
+    "exact_rank": null
+  },
+  {
+    "date": "2026-08-13",
+    "lottery": "fc3d",
+    "actual": "545",
+    "best_hits": 2,
+    "exact_rank": null
+  },
+  {
+    "date": "2026-08-13",
+    "lottery": "pls",
+    "actual": "014",
+    "best_hits": 2,
+    "exact_rank": null
+  },
+  {
+    "date": "2026-08-13",
+    "lottery": "plw",
+    "actual": "01490",
+    "best_hits": 2,
+    "exact_rank": null
+  },
+  {
+    "date": "2026-08-14",
+    "lottery": "fc3d",
+    "actual": "172",
+    "best_hits": 2,
+    "exact_rank": null
+  },
+  {
+    "date": "2026-08-14",
+    "lottery": "pls",
+    "actual": "927",
+    "best_hits": 2,
+    "exact_rank": null
+  },
+  {
+    "date": "2026-08-14",
+    "lottery": "plw",
+    "actual": "92738",
+    "best_hits": 2,
+    "exact_rank": null
+  },
+  {
+    "date": "2026-08-14",
+    "lottery": "fc3d",
+    "actual": "172",
+    "best_hits": 2,
+    "exact_rank": null
+  },
+  {
+    "date": "2026-08-14",
+    "lottery": "pls",
+    "actual": "927",
+    "best_hits": 2,
+    "exact_rank": null
+  },
+  {
+    "date": "2026-08-14",
+    "lottery": "plw",
+    "actual": "92738",
+    "best_hits": 2,
+    "exact_rank": null
+  },
+  {
+    "date": "2026-08-15",
+    "lottery": "fc3d",
+    "actual": "935",
+    "best_hits": 2,
+    "exact_rank": null
+  },
+  {
+    "date": "2026-08-15",
+    "lottery": "pls",
+    "actual": "953",
+    "best_hits": 2,
+    "exact_rank": null
+  },
+  {
+    "date": "2026-08-15",
+    "lottery": "plw",
+    "actual": "95300",
+    "best_hits": 2,
+    "exact_rank": null
+  },
+  {
+    "date": "2026-08-15",
+    "lottery": "fc3d",
+    "actual": "935",
+    "best_hits": 2,
+    "exact_rank": null
+  },
+  {
+    "date": "2026-08-15",
+    "lottery": "pls",
+    "actual": "953",
+    "best_hits": 2,
+    "exact_rank": null
+  },
+  {
+    "date": "2026-08-15",
+    "lottery": "plw",
+    "actual": "95300",
+    "best_hits": 2,
+    "exact_rank": null
+  },
+  {
+    "date": "2026-08-15",
+    "lottery": "fc3d",
+    "actual": "935",
+    "best_hits": 2,
+    "exact_rank": null
+  },
+  {
+    "date": "2026-08-15",
+    "lottery": "pls",
+    "actual": "953",
+    "best_hits": 2,
+    "exact_rank": null
+  },
+  {
+    "date": "2026-08-15",
+    "lottery": "plw",
+    "actual": "95300",
+    "best_hits": 2,
+    "exact_rank": null
+  },
+  {
+    "date": "2026-08-15",
+    "lottery": "fc3d",
+    "actual": "935",
+    "best_hits": 2,
+    "exact_rank": null
+  },
+  {
+    "date": "2026-08-15",
+    "lottery": "pls",
+    "actual": "953",
+    "best_hits": 2,
+    "exact_rank": null
+  },
+  {
+    "date": "2026-08-15",
+    "lottery": "plw",
+    "actual": "95300",
+    "best_hits": 2,
+    "exact_rank": null
+  },
+  {
+    "date": "2026-08-16",
+    "lottery": "fc3d",
+    "actual": "882",
+    "best_hits": 2,
+    "exact_rank": null
+  },
+  {
+    "date": "2026-08-16",
+    "lottery": "pls",
+    "actual": "019",
+    "best_hits": 2,
+    "exact_rank": null
+  },
+  {
+    "date": "2026-08-16",
+    "lottery": "plw",
+    "actual": "01966",
+    "best_hits": 2,
+    "exact_rank": null
+  },
+  {
+    "date": "2026-08-16",
+    "lottery": "fc3d",
+    "actual": "882",
+    "best_hits": 2,
+    "exact_rank": null
+  },
+  {
+    "date": "2026-08-16",
+    "lottery": "pls",
+    "actual": "019",
+    "best_hits": 2,
+    "exact_rank": null
+  },
+  {
+    "date": "2026-08-16",
+    "lottery": "plw",
+    "actual": "01966",
+    "best_hits": 2,
+    "exact_rank": null
+  },
+  {
+    "date": "2026-08-16",
+    "lottery": "fc3d",
+    "actual": "882",
+    "best_hits": 2,
+    "exact_rank": null
+  },
+  {
+    "date": "2026-08-16",
+    "lottery": "pls",
+    "actual": "019",
+    "best_hits": 2,
+    "exact_rank": null
+  },
+  {
+    "date": "2026-08-16",
+    "lottery": "plw",
+    "actual": "01966",
+    "best_hits": 2,
+    "exact_rank": null
+  },
+  {
+    "date": "2026-08-16",
+    "lottery": "fc3d",
+    "actual": "882",
+    "best_hits": 2,
+    "exact_rank": null
+  },
+  {
+    "date": "2026-08-16",
+    "lottery": "pls",
+    "actual": "019",
+    "best_hits": 2,
+    "exact_rank": null
+  },
+  {
+    "date": "2026-08-16",
+    "lottery": "plw",
+    "actual": "01966",
+    "best_hits": 2,
+    "exact_rank": null
+  },
+  {
+    "date": "2026-08-17",
+    "lottery": "fc3d",
+    "actual": "382",
+    "best_hits": 3,
+    "exact_rank": 13
+  },
+  {
+    "date": "2026-08-17",
+    "lottery": "pls",
+    "actual": "079",
+    "best_hits": 2,
+    "exact_rank": null
+  },
+  {
+    "date": "2026-08-17",
+    "lottery": "plw",
+    "actual": "07950",
+    "best_hits": 2,
+    "exact_rank": null
+  },
+  {
+    "date": "2026-08-17",
+    "lottery": "fc3d",
+    "actual": "382",
+    "best_hits": 3,
+    "exact_rank": 13
+  },
+  {
+    "date": "2026-08-17",
+    "lottery": "pls",
+    "actual": "079",
+    "best_hits": 2,
+    "exact_rank": null
+  },
+  {
+    "date": "2026-08-17",
+    "lottery": "plw",
+    "actual": "07950",
+    "best_hits": 2,
+    "exact_rank": null
+  },
+  {
+    "date": "2026-08-17",
+    "lottery": "fc3d",
+    "actual": "382",
+    "best_hits": 3,
+    "exact_rank": 13
+  },
+  {
+    "date": "2026-08-17",
+    "lottery": "pls",
+    "actual": "079",
+    "best_hits": 2,
+    "exact_rank": null
+  },
+  {
+    "date": "2026-08-17",
+    "lottery": "plw",
+    "actual": "07950",
+    "best_hits": 2,
+    "exact_rank": null
+  },
+  {
+    "date": "2026-08-18",
+    "lottery": "fc3d",
+    "actual": "225",
+    "best_hits": 2,
+    "exact_rank": null
+  },
+  {
+    "date": "2026-08-18",
+    "lottery": "pls",
+    "actual": "662",
     "best_hits": 1,
     "exact_rank": null
   },
   {
-    "date": "2026-08-12",
+    "date": "2026-08-18",
     "lottery": "plw",
-    "actual": "74071",
-    "best_hits": 2,
-    "exact_rank": null
-  },
-  {
-    "date": "2026-08-13",
-    "lottery": "fc3d",
-    "actual": "545",
-    "best_hits": 2,
-    "exact_rank": null
-  },
-  {
-    "date": "2026-08-13",
-    "lottery": "pls",
-    "actual": "014",
-    "best_hits": 2,
-    "exact_rank": null
-  },
-  {
-    "date": "2026-08-13",
-    "lottery": "plw",
-    "actual": "01490",
-    "best_hits": 2,
-    "exact_rank": null
-  },
-  {
-    "date": "2026-08-13",
-    "lottery": "fc3d",
-    "actual": "545",
-    "best_hits": 2,
-    "exact_rank": null
-  },
-  {
-    "date": "2026-08-13",
-    "lottery": "pls",
-    "actual": "014",
-    "best_hits": 2,
-    "exact_rank": null
-  },
-  {
-    "date": "2026-08-13",
-    "lottery": "plw",
-    "actual": "01490",
-    "best_hits": 2,
-    "exact_rank": null
-  },
-  {
-    "date": "2026-08-14",
-    "lottery": "fc3d",
-    "actual": "172",
-    "best_hits": 2,
-    "exact_rank": null
-  },
-  {
-    "date": "2026-08-14",
-    "lottery": "pls",
-    "actual": "927",
-    "best_hits": 2,
-    "exact_rank": null
-  },
-  {
-    "date": "2026-08-14",
-    "lottery": "plw",
-    "actual": "92738",
-    "best_hits": 2,
-    "exact_rank": null
-  },
-  {
-    "date": "2026-08-14",
-    "lottery": "fc3d",
-    "actual": "172",
-    "best_hits": 2,
-    "exact_rank": null
-  },
-  {
-    "date": "2026-08-14",
-    "lottery": "pls",
-    "actual": "927",
-    "best_hits": 2,
-    "exact_rank": null
-  },
-  {
-    "date": "2026-08-14",
-    "lottery": "plw",
-    "actual": "92738",
-    "best_hits": 2,
-    "exact_rank": null
-  },
-  {
-    "date": "2026-08-15",
-    "lottery": "fc3d",
-    "actual": "935",
-    "best_hits": 2,
-    "exact_rank": null
-  },
-  {
-    "date": "2026-08-15",
-    "lottery": "pls",
-    "actual": "953",
-    "best_hits": 2,
-    "exact_rank": null
-  },
-  {
-    "date": "2026-08-15",
-    "lottery": "plw",
-    "actual": "95300",
-    "best_hits": 2,
-    "exact_rank": null
-  },
-  {
-    "date": "2026-08-15",
-    "lottery": "fc3d",
-    "actual": "935",
-    "best_hits": 2,
-    "exact_rank": null
-  },
-  {
-    "date": "2026-08-15",
-    "lottery": "pls",
-    "actual": "953",
-    "best_hits": 2,
-    "exact_rank": null
-  },
-  {
-    "date": "2026-08-15",
-    "lottery": "plw",
-    "actual": "95300",
-    "best_hits": 2,
-    "exact_rank": null
-  },
-  {
-    "date": "2026-08-15",
-    "lottery": "fc3d",
-    "actual": "935",
-    "best_hits": 2,
-    "exact_rank": null
-  },
-  {
-    "date": "2026-08-15",
-    "lottery": "pls",
-    "actual": "953",
-    "best_hits": 2,
-    "exact_rank": null
-  },
-  {
-    "date": "2026-08-15",
-    "lottery": "plw",
-    "actual": "95300",
-    "best_hits": 2,
-    "exact_rank": null
-  },
-  {
-    "date": "2026-08-15",
-    "lottery": "fc3d",
-    "actual": "935",
-    "best_hits": 2,
-    "exact_rank": null
-  },
-  {
-    "date": "2026-08-15",
-    "lottery": "pls",
-    "actual": "953",
-    "best_hits": 2,
-    "exact_rank": null
-  },
-  {
-    "date": "2026-08-15",
-    "lottery": "plw",
-    "actual": "95300",
-    "best_hits": 2,
-    "exact_rank": null
-  },
-  {
-    "date": "2026-08-16",
-    "lottery": "fc3d",
-    "actual": "882",
-    "best_hits": 2,
-    "exact_rank": null
-  },
-  {
-    "date": "2026-08-16",
-    "lottery": "pls",
-    "actual": "019",
-    "best_hits": 2,
-    "exact_rank": null
-  },
-  {
-    "date": "2026-08-16",
-    "lottery": "plw",
-    "actual": "01966",
-    "best_hits": 2,
-    "exact_rank": null
-  },
-  {
-    "date": "2026-08-16",
-    "lottery": "fc3d",
-    "actual": "882",
-    "best_hits": 2,
-    "exact_rank": null
-  },
-  {
-    "date": "2026-08-16",
-    "lottery": "pls",
-    "actual": "019",
-    "best_hits": 2,
-    "exact_rank": null
-  },
-  {
-    "date": "2026-08-16",
-    "lottery": "plw",
-    "actual": "01966",
-    "best_hits": 2,
-    "exact_rank": null
-  },
-  {
-    "date": "2026-08-16",
-    "lottery": "fc3d",
-    "actual": "882",
-    "best_hits": 2,
-    "exact_rank": null
-  },
-  {
-    "date": "2026-08-16",
-    "lottery": "pls",
-    "actual": "019",
-    "best_hits": 2,
-    "exact_rank": null
-  },
-  {
-    "date": "2026-08-16",
-    "lottery": "plw",
-    "actual": "01966",
-    "best_hits": 2,
-    "exact_rank": null
-  },
-  {
-    "date": "2026-08-16",
-    "lottery": "fc3d",
-    "actual": "882",
-    "best_hits": 2,
-    "exact_rank": null
-  },
-  {
-    "date": "2026-08-16",
-    "lottery": "pls",
-    "actual": "019",
-    "best_hits": 2,
-    "exact_rank": null
-  },
-  {
-    "date": "2026-08-16",
-    "lottery": "plw",
-    "actual": "01966",
-    "best_hits": 2,
-    "exact_rank": null
-  },
-  {
-    "date": "2026-08-17",
-    "lottery": "fc3d",
-    "actual": "382",
-    "best_hits": 3,
-    "exact_rank": 13
-  },
-  {
-    "date": "2026-08-17",
-    "lottery": "pls",
-    "actual": "079",
-    "best_hits": 2,
-    "exact_rank": null
-  },
-  {
-    "date": "2026-08-17",
-    "lottery": "plw",
-    "actual": "07950",
-    "best_hits": 2,
-    "exact_rank": null
-  },
-  {
-    "date": "2026-08-17",
-    "lottery": "fc3d",
-    "actual": "382",
-    "best_hits": 3,
-    "exact_rank": 13
-  },
-  {
-    "date": "2026-08-17",
-    "lottery": "pls",
-    "actual": "079",
-    "best_hits": 2,
-    "exact_rank": null
-  },
-  {
-    "date": "2026-08-17",
-    "lottery": "plw",
-    "actual": "07950",
-    "best_hits": 2,
-    "exact_rank": null
-  },
-  {
-    "date": "2026-08-17",
-    "lottery": "fc3d",
-    "actual": "382",
-    "best_hits": 3,
-    "exact_rank": 13
-  },
-  {
-    "date": "2026-08-17",
-    "lottery": "pls",
-    "actual": "079",
-    "best_hits": 2,
-    "exact_rank": null
-  },
-  {
-    "date": "2026-08-17",
-    "lottery": "plw",
-    "actual": "07950",
+    "actual": "66219",
     "best_hits": 2,
     "exact_rank": null
   }
