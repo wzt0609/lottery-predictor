@@ -1,6 +1,6 @@
 {
   "date": "2026-08-19",
-  "created_at": "2026-08-19T21:02:12",
+  "created_at": "2026-08-19T21:52:33",
   "lotteries": {
     "fc3d": {
       "name": "中国福利彩票 3D",
@@ -40,7 +40,7 @@
       },
       "pre_draw_signals": {
         "source": "https://www.17500.cn/",
-        "issue_hint": "220",
+        "issue_hint": "221",
         "draw_number": "221",
         "machine_number": "575",
         "test_number": "038",
@@ -181,7 +181,7 @@
       },
       "pre_draw_signals": {
         "source": "https://www.17500.cn/",
-        "issue_hint": "220",
+        "issue_hint": "221",
         "draw_number": "221",
         "machine_number": "575",
         "test_number": "038",
@@ -322,7 +322,7 @@
       },
       "pre_draw_signals": {
         "source": "https://www.17500.cn/",
-        "issue_hint": "220",
+        "issue_hint": "221",
         "machine_number": "57522",
         "test_number": "03822",
         "focus_number": "89522"
