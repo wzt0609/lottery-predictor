@@ -5,7 +5,7 @@
 ## 中国福利彩票 3D
 - 最高评分 3 码：285、275、485
 - 数据来源：https://touch.17500.cn/award/history/lotid/3d.html
-- 开机/试机/关注码：{"source": "https://www.17500.cn/", "issue_hint": "222", "draw_number": "223", "machine_number": "603", "test_number": "749", "focus_number": "356"}
+- 开机/试机/关注码：{"source": "https://www.17500.cn/", "issue_hint": "223", "draw_number": "223", "machine_number": "603", "test_number": "749", "focus_number": "356"}
 - 历史期数：131
 - 最新开奖：2026222 / 2026-08-20 / 380
 - 权重：{"frequency": 0.34, "recency": 0.28, "omission": 0.22, "transition": 0.16}
@@ -27,7 +27,7 @@
 ## 中国体育彩票 排列三
 - 最高评分 3 码：065、962、365
 - 数据来源：https://touch.17500.cn/award/history/lotid/pl3.html
-- 开机/试机/关注码：{"source": "https://www.17500.cn/", "issue_hint": "222", "draw_number": "223", "machine_number": "603", "test_number": "749", "focus_number": "356"}
+- 开机/试机/关注码：{"source": "https://www.17500.cn/", "issue_hint": "223", "draw_number": "223", "machine_number": "603", "test_number": "749", "focus_number": "356"}
 - 历史期数：131
 - 最新开奖：2026222 / 2026-08-20 / 877
 - 权重：{"frequency": 0.34, "recency": 0.28, "omission": 0.22, "transition": 0.16}
@@ -49,7 +49,7 @@
 ## 中国体育彩票 排列五
 - 最高评分 3 码：06570、96273、96543
 - 数据来源：https://touch.17500.cn/award/history/lotid/pl5.html
-- 开机/试机/关注码：{"source": "https://www.17500.cn/", "issue_hint": "222", "machine_number": "60322", "test_number": "74922", "focus_number": "35622"}
+- 开机/试机/关注码：{"source": "https://www.17500.cn/", "issue_hint": "223", "machine_number": "60322", "test_number": "74922", "focus_number": "35622"}
 - 历史期数：131
 - 最新开奖：2026222 / 2026-08-20 / 87771
 - 权重：{"frequency": 0.34, "recency": 0.28, "omission": 0.22, "transition": 0.16}
