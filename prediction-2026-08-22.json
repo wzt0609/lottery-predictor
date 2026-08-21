@@ -1,0 +1,428 @@
+{
+  "date": "2026-08-22",
+  "created_at": "2026-08-22T00:04:01",
+  "lotteries": {
+    "fc3d": {
+      "name": "中国福利彩票 3D",
+      "source": "https://touch.17500.cn/award/history/lotid/3d.html",
+      "history_count": 132,
+      "latest_issue": "2026223",
+      "latest_date": "2026-08-21",
+      "latest_number": "948",
+      "weights": {
+        "frequency": 0.34,
+        "recency": 0.28,
+        "omission": 0.22,
+        "transition": 0.16
+      },
+      "trend_summary": {
+        "recent_window": 30,
+        "sum_avg": 14.43,
+        "sum_last": 21,
+        "span_avg": 4.93,
+        "span_last": 5,
+        "most_common_odd_count": 1,
+        "most_common_big_count": 1,
+        "hot_sum_tails": [
+          [
+            7,
+            5
+          ],
+          [
+            3,
+            4
+          ],
+          [
+            4,
+            4
+          ]
+        ]
+      },
+      "pre_draw_signals": {
+        "source": "https://www.17500.cn/",
+        "issue_hint": "223",
+        "draw_number": "223",
+        "machine_number": "603",
+        "test_number": "749",
+        "focus_number": "356"
+      },
+      "candidates": [
+        {
+          "rank": 1,
+          "number": "472",
+          "score": -6.439344,
+          "sum": 13,
+          "span": 5
+        },
+        {
+          "rank": 2,
+          "number": "275",
+          "score": -6.676572,
+          "sum": 14,
+          "span": 5
+        },
+        {
+          "rank": 3,
+          "number": "672",
+          "score": -6.739257,
+          "sum": 15,
+          "span": 5
+        },
+        {
+          "rank": 4,
+          "number": "872",
+          "score": -6.830792,
+          "sum": 17,
+          "span": 6
+        },
+        {
+          "rank": 5,
+          "number": "372",
+          "score": -6.865912,
+          "sum": 12,
+          "span": 5
+        },
+        {
+          "rank": 6,
+          "number": "485",
+          "score": -6.866598,
+          "sum": 17,
+          "span": 4
+        },
+        {
+          "rank": 7,
+          "number": "382",
+          "score": -6.905945,
+          "sum": 13,
+          "span": 6
+        },
+        {
+          "rank": 8,
+          "number": "272",
+          "score": -6.913752,
+          "sum": 11,
+          "span": 5
+        },
+        {
+          "rank": 9,
+          "number": "285",
+          "score": -6.942554,
+          "sum": 15,
+          "span": 6
+        },
+        {
+          "rank": 10,
+          "number": "825",
+          "score": -6.973817,
+          "sum": 15,
+          "span": 6
+        }
+      ],
+      "top3": [
+        {
+          "rank": 1,
+          "number": "472",
+          "score": -6.439344,
+          "sum": 13,
+          "span": 5
+        },
+        {
+          "rank": 2,
+          "number": "275",
+          "score": -6.676572,
+          "sum": 14,
+          "span": 5
+        },
+        {
+          "rank": 3,
+          "number": "672",
+          "score": -6.739257,
+          "sum": 15,
+          "span": 5
+        }
+      ],
+      "note": "随机开奖不可预测，本结果仅用于统计记录和复盘。"
+    },
+    "pls": {
+      "name": "中国体育彩票 排列三",
+      "source": "https://touch.17500.cn/award/history/lotid/pl3.html",
+      "history_count": 132,
+      "latest_issue": "2026223",
+      "latest_date": "2026-08-21",
+      "latest_number": "223",
+      "weights": {
+        "frequency": 0.34,
+        "recency": 0.28,
+        "omission": 0.22,
+        "transition": 0.16
+      },
+      "trend_summary": {
+        "recent_window": 30,
+        "sum_avg": 14.53,
+        "sum_last": 7,
+        "span_avg": 5.63,
+        "span_last": 1,
+        "most_common_odd_count": 2,
+        "most_common_big_count": 2,
+        "hot_sum_tails": [
+          [
+            4,
+            6
+          ],
+          [
+            6,
+            4
+          ],
+          [
+            7,
+            4
+          ]
+        ]
+      },
+      "pre_draw_signals": {
+        "source": "https://www.17500.cn/",
+        "issue_hint": "223",
+        "draw_number": "223",
+        "machine_number": "603",
+        "test_number": "749",
+        "focus_number": "356"
+      },
+      "candidates": [
+        {
+          "rank": 1,
+          "number": "065",
+          "score": -6.358377,
+          "sum": 11,
+          "span": 6
+        },
+        {
+          "rank": 2,
+          "number": "915",
+          "score": -6.607634,
+          "sum": 15,
+          "span": 8
+        },
+        {
+          "rank": 3,
+          "number": "914",
+          "score": -6.646081,
+          "sum": 14,
+          "span": 8
+        },
+        {
+          "rank": 4,
+          "number": "075",
+          "score": -6.747686,
+          "sum": 12,
+          "span": 7
+        },
+        {
+          "rank": 5,
+          "number": "815",
+          "score": -6.87743,
+          "sum": 14,
+          "span": 7
+        },
+        {
+          "rank": 6,
+          "number": "715",
+          "score": -7.01058,
+          "sum": 13,
+          "span": 6
+        },
+        {
+          "rank": 7,
+          "number": "365",
+          "score": -7.054032,
+          "sum": 14,
+          "span": 3
+        },
+        {
+          "rank": 8,
+          "number": "916",
+          "score": -7.078014,
+          "sum": 16,
+          "span": 8
+        },
+        {
+          "rank": 9,
+          "number": "055",
+          "score": -7.166411,
+          "sum": 10,
+          "span": 5
+        },
+        {
+          "rank": 10,
+          "number": "716",
+          "score": -7.220546,
+          "sum": 14,
+          "span": 6
+        }
+      ],
+      "top3": [
+        {
+          "rank": 1,
+          "number": "065",
+          "score": -6.358377,
+          "sum": 11,
+          "span": 6
+        },
+        {
+          "rank": 2,
+          "number": "915",
+          "score": -6.607634,
+          "sum": 15,
+          "span": 8
+        },
+        {
+          "rank": 3,
+          "number": "914",
+          "score": -6.646081,
+          "sum": 14,
+          "span": 8
+        }
+      ],
+      "note": "随机开奖不可预测，本结果仅用于统计记录和复盘。"
+    },
+    "plw": {
+      "name": "中国体育彩票 排列五",
+      "source": "https://touch.17500.cn/award/history/lotid/pl5.html",
+      "history_count": 132,
+      "latest_issue": "2026223",
+      "latest_date": "2026-08-21",
+      "latest_number": "22373",
+      "weights": {
+        "frequency": 0.34,
+        "recency": 0.28,
+        "omission": 0.22,
+        "transition": 0.16
+      },
+      "trend_summary": {
+        "recent_window": 30,
+        "sum_avg": 23.1,
+        "sum_last": 17,
+        "span_avg": 7.1,
+        "span_last": 5,
+        "most_common_odd_count": 3,
+        "most_common_big_count": 3,
+        "hot_sum_tails": [
+          [
+            4,
+            6
+          ],
+          [
+            7,
+            4
+          ],
+          [
+            9,
+            4
+          ]
+        ]
+      },
+      "pre_draw_signals": {
+        "source": "https://www.17500.cn/",
+        "issue_hint": "223",
+        "machine_number": "60322",
+        "test_number": "74922",
+        "focus_number": "35622"
+      },
+      "candidates": [
+        {
+          "rank": 1,
+          "number": "06571",
+          "score": -9.358268,
+          "sum": 19,
+          "span": 7
+        },
+        {
+          "rank": 2,
+          "number": "01578",
+          "score": -9.614922,
+          "sum": 21,
+          "span": 8
+        },
+        {
+          "rank": 3,
+          "number": "91572",
+          "score": -9.642031,
+          "sum": 24,
+          "span": 8
+        },
+        {
+          "rank": 4,
+          "number": "07572",
+          "score": -9.890805,
+          "sum": 21,
+          "span": 7
+        },
+        {
+          "rank": 5,
+          "number": "96471",
+          "score": -9.907293,
+          "sum": 27,
+          "span": 8
+        },
+        {
+          "rank": 6,
+          "number": "36570",
+          "score": -9.91127,
+          "sum": 21,
+          "span": 7
+        },
+        {
+          "rank": 7,
+          "number": "91670",
+          "score": -9.988978,
+          "sum": 23,
+          "span": 9
+        },
+        {
+          "rank": 8,
+          "number": "96521",
+          "score": -9.992986,
+          "sum": 23,
+          "span": 8
+        },
+        {
+          "rank": 9,
+          "number": "96542",
+          "score": -10.031446,
+          "sum": 26,
+          "span": 7
+        },
+        {
+          "rank": 10,
+          "number": "81570",
+          "score": -10.065887,
+          "sum": 21,
+          "span": 8
+        }
+      ],
+      "top3": [
+        {
+          "rank": 1,
+          "number": "06571",
+          "score": -9.358268,
+          "sum": 19,
+          "span": 7
+        },
+        {
+          "rank": 3,
+          "number": "91572",
+          "score": -9.642031,
+          "sum": 24,
+          "span": 8
+        },
+        {
+          "rank": 2,
+          "number": "01578",
+          "score": -9.614922,
+          "sum": 21,
+          "span": 8
+        }
+      ],
+      "note": "随机开奖不可预测，本结果仅用于统计记录和复盘。"
+    }
+  }
+}
