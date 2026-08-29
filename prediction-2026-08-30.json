@@ -1,6 +1,6 @@
 {
   "date": "2026-08-30",
-  "created_at": "2026-08-30T02:39:43",
+  "created_at": "2026-08-30T05:14:51",
   "lotteries": {
     "fc3d": {
       "name": "中国福利彩票 3D",
@@ -286,7 +286,7 @@
     },
     "plw": {
       "name": "中国体育彩票 排列五",
-      "source": "https://touch.17500.cn/award/history/lotid/pl5.html",
+      "source": "local-cache",
       "history_count": 140,
       "latest_issue": "2026231",
       "latest_date": "2026-08-29",
