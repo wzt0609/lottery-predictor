@@ -1,6 +1,6 @@
 {
   "date": "2026-09-21",
-  "created_at": "2026-09-21T01:31:36",
+  "created_at": "2026-09-21T03:43:35",
   "lotteries": {
     "fc3d": {
       "name": "中国福利彩票 3D",
@@ -145,11 +145,11 @@
     },
     "pls": {
       "name": "中国体育彩票 排列三",
-      "source": "local-cache",
-      "history_count": 161,
-      "latest_issue": "2026252",
-      "latest_date": "2026-09-19",
-      "latest_number": "190",
+      "source": "https://touch.17500.cn/award/history/lotid/pl3.html",
+      "history_count": 162,
+      "latest_issue": "2026253",
+      "latest_date": "2026-09-20",
+      "latest_number": "893",
       "weights": {
         "frequency": 0.34,
         "recency": 0.28,
@@ -158,16 +158,16 @@
       },
       "trend_summary": {
         "recent_window": 30,
-        "sum_avg": 11.53,
-        "sum_last": 10,
-        "span_avg": 5.3,
-        "span_last": 9,
+        "sum_avg": 11.97,
+        "sum_last": 20,
+        "span_avg": 5.47,
+        "span_last": 6,
         "most_common_odd_count": 2,
         "most_common_big_count": 1,
         "hot_sum_tails": [
           [
             0,
-            6
+            7
           ],
           [
             1,
@@ -191,71 +191,71 @@
         {
           "rank": 1,
           "number": "921",
-          "score": -6.705892,
+          "score": -6.67885,
           "sum": 12,
           "span": 8
         },
         {
           "rank": 2,
-          "number": "923",
-          "score": -6.826002,
-          "sum": 14,
+          "number": "925",
+          "score": -6.701541,
+          "sum": 16,
           "span": 7
         },
         {
           "rank": 3,
-          "number": "925",
-          "score": -6.924237,
-          "sum": 16,
-          "span": 7
-        },
-        {
-          "rank": 4,
           "number": "961",
-          "score": -6.967586,
+          "score": -6.997963,
           "sum": 16,
           "span": 8
         },
         {
+          "rank": 4,
+          "number": "924",
+          "score": -7.197856,
+          "sum": 15,
+          "span": 7
+        },
+        {
           "rank": 5,
           "number": "165",
-          "score": -7.257405,
+          "score": -7.26558,
           "sum": 12,
           "span": 5
         },
         {
           "rank": 6,
-          "number": "361",
-          "score": -7.258773,
-          "sum": 10,
-          "span": 5
-        },
-        {
-          "rank": 7,
-          "number": "924",
-          "score": -7.291931,
-          "sum": 15,
+          "number": "922",
+          "score": -7.279842,
+          "sum": 13,
           "span": 7
         },
         {
-          "rank": 8,
+          "rank": 7,
           "number": "761",
-          "score": -7.293387,
+          "score": -7.421824,
           "sum": 14,
           "span": 6
         },
         {
+          "rank": 8,
+          "number": "725",
+          "score": -7.446974,
+          "sum": 14,
+          "span": 5
+        },
+        {
           "rank": 9,
           "number": "721",
-          "score": -7.348533,
+          "score": -7.466642,
           "sum": 10,
           "span": 6
         },
         {
           "rank": 10,
-          "number": "821",
-          "score": -7.359755,
-          "sum": 11,
+          "number": "926",
+          "score": -7.476783,
+          "sum": 17,
           "span": 7
         }
       ],
@@ -263,23 +263,23 @@
         {
           "rank": 1,
           "number": "921",
-          "score": -6.705892,
+          "score": -6.67885,
           "sum": 12,
           "span": 8
         },
         {
           "rank": 2,
-          "number": "923",
-          "score": -6.826002,
-          "sum": 14,
+          "number": "925",
+          "score": -6.701541,
+          "sum": 16,
           "span": 7
         },
         {
           "rank": 3,
-          "number": "925",
-          "score": -6.924237,
+          "number": "961",
+          "score": -6.997963,
           "sum": 16,
-          "span": 7
+          "span": 8
         }
       ],
       "note": "随机开奖不可预测，本结果仅用于统计记录和复盘。"
