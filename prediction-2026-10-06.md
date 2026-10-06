@@ -26,7 +26,7 @@
 
 ## 中国体育彩票 排列三
 - 最高评分 3 码：176、075、165
-- 数据来源：https://touch.17500.cn/award/history/lotid/pl3.html
+- 数据来源：local-cache
 - 开机/试机/关注码：{"source": "https://www.17500.cn/", "issue_hint": "264", "draw_number": "265", "machine_number": "829", "test_number": "037", "focus_number": "217"}
 - 历史期数：173
 - 最新开奖：2026264 / 2026-10-05 / 592
