@@ -5,7 +5,7 @@
 ## 中国福利彩票 3D
 - 最高评分 3 码：528、582、821
 - 数据来源：https://touch.17500.cn/award/history/lotid/3d.html
-- 开机/试机/关注码：{"source": "https://www.17500.cn/", "issue_hint": "268", "draw_number": "269", "machine_number": "336", "test_number": "581", "focus_number": "871"}
+- 开机/试机/关注码：{"source": "https://www.17500.cn/", "issue_hint": "269", "draw_number": "269", "machine_number": "336", "test_number": "581", "focus_number": "871"}
 - 历史期数：177
 - 最新开奖：2026268 / 2026-10-09 / 890
 - 权重：{"frequency": 0.34, "recency": 0.28, "omission": 0.22, "transition": 0.16}
@@ -27,7 +27,7 @@
 ## 中国体育彩票 排列三
 - 最高评分 3 码：165、163、185
 - 数据来源：https://touch.17500.cn/award/history/lotid/pl3.html
-- 开机/试机/关注码：{"source": "https://www.17500.cn/", "issue_hint": "268", "draw_number": "269", "machine_number": "336", "test_number": "581", "focus_number": "871"}
+- 开机/试机/关注码：{"source": "https://www.17500.cn/", "issue_hint": "269", "draw_number": "269", "machine_number": "336", "test_number": "581", "focus_number": "871"}
 - 历史期数：177
 - 最新开奖：2026268 / 2026-10-09 / 300
 - 权重：{"frequency": 0.34, "recency": 0.28, "omission": 0.22, "transition": 0.16}
@@ -49,7 +49,7 @@
 ## 中国体育彩票 排列五
 - 最高评分 3 码：16570、18571、06571
 - 数据来源：https://touch.17500.cn/award/history/lotid/pl5.html
-- 开机/试机/关注码：{"source": "https://www.17500.cn/", "issue_hint": "268", "machine_number": "33626", "test_number": "58126", "focus_number": "87126"}
+- 开机/试机/关注码：{"source": "https://www.17500.cn/", "issue_hint": "269", "machine_number": "33626", "test_number": "58126", "focus_number": "87127"}
 - 历史期数：177
 - 最新开奖：2026268 / 2026-10-09 / 30076
 - 权重：{"frequency": 0.34, "recency": 0.28, "omission": 0.22, "transition": 0.16}
@@ -57,13 +57,13 @@
 
 | 排名 | 号码 | 分数 | 和值 | 跨度 |
 |---:|---:|---:|---:|---:|
-| 1 | 16570 | -9.67157 | 19 | 7 |
-| 2 | 06571 | -9.755857 | 19 | 7 |
+| 1 | 16570 | -9.68237 | 19 | 7 |
+| 2 | 06571 | -9.766657 | 19 | 7 |
 | 3 | 18571 | -9.983124 | 22 | 7 |
-| 4 | 96171 | -10.024528 | 24 | 8 |
-| 5 | 96341 | -10.047247 | 23 | 8 |
-| 6 | 96143 | -10.056847 | 23 | 8 |
-| 7 | 07543 | -10.064325 | 19 | 7 |
+| 4 | 96171 | -10.035328 | 24 | 8 |
+| 5 | 96341 | -10.058047 | 23 | 8 |
+| 6 | 07543 | -10.064325 | 19 | 7 |
+| 7 | 96143 | -10.067647 | 23 | 8 |
 | 8 | 18543 | -10.086744 | 21 | 7 |
 | 9 | 18370 | -10.111089 | 19 | 8 |
 | 10 | 08573 | -10.118633 | 23 | 8 |
