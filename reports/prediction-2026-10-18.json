@@ -1,6 +1,6 @@
 {
   "date": "2026-10-18",
-  "created_at": "2026-10-18T04:46:39",
+  "created_at": "2026-10-18T07:00:05",
   "lotteries": {
     "fc3d": {
       "name": "中国福利彩票 3D",
@@ -145,7 +145,7 @@
     },
     "pls": {
       "name": "中国体育彩票 排列三",
-      "source": "https://touch.17500.cn/award/history/lotid/pl3.html",
+      "source": "local-cache",
       "history_count": 185,
       "latest_issue": "2026276",
       "latest_date": "2026-10-17",
@@ -286,7 +286,7 @@
     },
     "plw": {
       "name": "中国体育彩票 排列五",
-      "source": "https://touch.17500.cn/award/history/lotid/pl5.html",
+      "source": "local-cache",
       "history_count": 185,
       "latest_issue": "2026276",
       "latest_date": "2026-10-17",
