@@ -26,7 +26,7 @@
 
 ## 中国体育彩票 排列三
 - 最高评分 3 码：167、165、164
-- 数据来源：https://touch.17500.cn/award/history/lotid/pl3.html
+- 数据来源：local-cache
 - 开机/试机/关注码：{"source": "https://www.17500.cn/", "issue_hint": "276", "draw_number": "276", "machine_number": "457", "test_number": "637", "focus_number": "796"}
 - 历史期数：185
 - 最新开奖：2026276 / 2026-10-17 / 906
@@ -48,7 +48,7 @@
 
 ## 中国体育彩票 排列五
 - 最高评分 3 码：16743、16570、96143
-- 数据来源：https://touch.17500.cn/award/history/lotid/pl5.html
+- 数据来源：local-cache
 - 开机/试机/关注码：{"source": "https://www.17500.cn/", "issue_hint": "276", "machine_number": "45727", "test_number": "63727", "focus_number": "79627"}
 - 历史期数：185
 - 最新开奖：2026276 / 2026-10-17 / 90651
