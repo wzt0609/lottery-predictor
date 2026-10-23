@@ -1,6 +1,6 @@
 {
   "date": "2026-10-23",
-  "created_at": "2026-10-23T18:14:20",
+  "created_at": "2026-10-23T23:13:12",
   "method": "V2-约束筛选+随机采样",
   "lotteries": {
     "fc3d": {
@@ -217,8 +217,8 @@
       "name": "中国体育彩票 排列三",
       "source": "http://data.17500.cn/pl3_asc.txt",
       "history_count": 220,
-      "latest_issue": "2026281",
-      "latest_date": "2026-10-22",
+      "latest_issue": "2026282",
+      "latest_date": "2026-10-23",
       "latest_number": "346",
       "method": "V2",
       "trend_summary": {
