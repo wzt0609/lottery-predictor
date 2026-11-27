@@ -1,0 +1,637 @@
+{
+  "date": "2026-11-28",
+  "created_at": "2026-11-28T03:52:26",
+  "method": "V2-约束筛选+随机采样",
+  "lotteries": {
+    "fc3d": {
+      "name": "中国福利彩票 3D",
+      "source": "https://touch.17500.cn/award/history/lotid/3d.html",
+      "history_count": 220,
+      "latest_issue": "2026317",
+      "latest_date": "2026-11-27",
+      "latest_number": "300",
+      "method": "V2",
+      "trend_summary": {
+        "recent_window": 30,
+        "sum_avg": 12.17,
+        "sum_last": 3,
+        "span_avg": 5.4,
+        "span_last": 3,
+        "mod3_distribution": {
+          "0路": "41%",
+          "1路": "29%",
+          "2路": "30%"
+        }
+      },
+      "candidates": [
+        {
+          "rank": 1,
+          "number": "306",
+          "score": 4.8125,
+          "sum": 9,
+          "span": 6,
+          "selection_note": "constraint_sample_diversified"
+        },
+        {
+          "rank": 2,
+          "number": "314",
+          "score": 3.842,
+          "sum": 8,
+          "span": 3,
+          "selection_note": "constraint_sample_diversified"
+        },
+        {
+          "rank": 3,
+          "number": "458",
+          "score": 2.8956,
+          "sum": 17,
+          "span": 4,
+          "selection_note": "constraint_sample_diversified"
+        },
+        {
+          "rank": 4,
+          "number": "636",
+          "score": 3.285,
+          "sum": 15,
+          "span": 3,
+          "selection_note": "constraint_sample_diversified"
+        },
+        {
+          "rank": 5,
+          "number": "346",
+          "score": 3.8661,
+          "sum": 13,
+          "span": 3,
+          "selection_note": "constraint_sample_diversified"
+        },
+        {
+          "rank": 6,
+          "number": "506",
+          "score": 4.2246,
+          "sum": 11,
+          "span": 6,
+          "selection_note": "constraint_sample_diversified"
+        },
+        {
+          "rank": 7,
+          "number": "204",
+          "score": 3.3534,
+          "sum": 6,
+          "span": 4,
+          "selection_note": "constraint_sample_diversified"
+        },
+        {
+          "rank": 8,
+          "number": "407",
+          "score": 3.3842,
+          "sum": 11,
+          "span": 7,
+          "selection_note": "constraint_sample_diversified"
+        },
+        {
+          "rank": 9,
+          "number": "006",
+          "score": 3.8044,
+          "sum": 6,
+          "span": 6,
+          "selection_note": "constraint_sample_diversified"
+        },
+        {
+          "rank": 10,
+          "number": "650",
+          "score": 2.7964,
+          "sum": 11,
+          "span": 6,
+          "selection_note": "constraint_sample_diversified"
+        },
+        {
+          "rank": 11,
+          "number": "718",
+          "score": 2.8648,
+          "sum": 16,
+          "span": 7,
+          "selection_note": "constraint_sample_diversified"
+        },
+        {
+          "rank": 12,
+          "number": "340",
+          "score": 3.309,
+          "sum": 7,
+          "span": 4,
+          "selection_note": "constraint_sample_diversified"
+        },
+        {
+          "rank": 13,
+          "number": "501",
+          "score": 3.3534,
+          "sum": 6,
+          "span": 5,
+          "selection_note": "constraint_sample_diversified"
+        },
+        {
+          "rank": 14,
+          "number": "614",
+          "score": 3.3226,
+          "sum": 11,
+          "span": 5,
+          "selection_note": "constraint_sample_diversified"
+        },
+        {
+          "rank": 15,
+          "number": "256",
+          "score": 2.8648,
+          "sum": 13,
+          "span": 4,
+          "selection_note": "constraint_sample_diversified"
+        },
+        {
+          "rank": 16,
+          "number": "512",
+          "score": 2.834,
+          "sum": 8,
+          "span": 4,
+          "selection_note": "constraint_sample_diversified"
+        },
+        {
+          "rank": 17,
+          "number": "385",
+          "score": 2.513,
+          "sum": 16,
+          "span": 5,
+          "selection_note": "constraint_sample_diversified"
+        },
+        {
+          "rank": 18,
+          "number": "505",
+          "score": 3.285,
+          "sum": 10,
+          "span": 5,
+          "selection_note": "constraint_sample_diversified"
+        },
+        {
+          "rank": 19,
+          "number": "701",
+          "score": 2.9332,
+          "sum": 8,
+          "span": 7,
+          "selection_note": "constraint_sample_diversified"
+        },
+        {
+          "rank": 20,
+          "number": "823",
+          "score": 2.0928,
+          "sum": 13,
+          "span": 6,
+          "selection_note": "constraint_sample_diversified"
+        }
+      ],
+      "top3": [
+        {
+          "rank": 1,
+          "number": "306",
+          "score": 4.8125,
+          "sum": 9,
+          "span": 6,
+          "selection_note": "constraint_sample_diversified"
+        },
+        {
+          "rank": 2,
+          "number": "314",
+          "score": 3.842,
+          "sum": 8,
+          "span": 3,
+          "selection_note": "constraint_sample_diversified"
+        },
+        {
+          "rank": 3,
+          "number": "458",
+          "score": 2.8956,
+          "sum": 17,
+          "span": 4,
+          "selection_note": "constraint_sample_diversified"
+        }
+      ],
+      "note": "随机开奖不可预测，本结果仅用于统计记录和复盘。"
+    },
+    "pls": {
+      "name": "中国体育彩票 排列三",
+      "source": "https://touch.17500.cn/award/history/lotid/pl3.html",
+      "history_count": 220,
+      "latest_issue": "2026317",
+      "latest_date": "2026-11-27",
+      "latest_number": "553",
+      "method": "V2",
+      "trend_summary": {
+        "recent_window": 30,
+        "sum_avg": 12.27,
+        "sum_last": 13,
+        "span_avg": 5.17,
+        "span_last": 2,
+        "mod3_distribution": {
+          "0路": "44%",
+          "1路": "29%",
+          "2路": "27%"
+        }
+      },
+      "candidates": [
+        {
+          "rank": 1,
+          "number": "062",
+          "score": 6.5163,
+          "sum": 8,
+          "span": 6,
+          "selection_note": "constraint_sample_diversified"
+        },
+        {
+          "rank": 2,
+          "number": "163",
+          "score": 4.956,
+          "sum": 10,
+          "span": 5,
+          "selection_note": "constraint_sample_diversified"
+        },
+        {
+          "rank": 3,
+          "number": "053",
+          "score": 5.055,
+          "sum": 8,
+          "span": 5,
+          "selection_note": "constraint_sample_diversified"
+        },
+        {
+          "rank": 4,
+          "number": "132",
+          "score": 4.5285,
+          "sum": 6,
+          "span": 2,
+          "selection_note": "constraint_sample_diversified"
+        },
+        {
+          "rank": 5,
+          "number": "037",
+          "score": 4.7265,
+          "sum": 10,
+          "span": 7,
+          "selection_note": "constraint_sample_diversified"
+        },
+        {
+          "rank": 6,
+          "number": "862",
+          "score": 4.9848,
+          "sum": 16,
+          "span": 6,
+          "selection_note": "constraint_sample_diversified"
+        },
+        {
+          "rank": 7,
+          "number": "061",
+          "score": 4.9911,
+          "sum": 7,
+          "span": 6,
+          "selection_note": "constraint_sample_diversified"
+        },
+        {
+          "rank": 8,
+          "number": "160",
+          "score": 4.6212,
+          "sum": 7,
+          "span": 6,
+          "selection_note": "constraint_sample_diversified"
+        },
+        {
+          "rank": 9,
+          "number": "363",
+          "score": 4.5349,
+          "sum": 12,
+          "span": 3,
+          "selection_note": "constraint_sample_diversified"
+        },
+        {
+          "rank": 10,
+          "number": "962",
+          "score": 4.6275,
+          "sum": 17,
+          "span": 7,
+          "selection_note": "constraint_sample_diversified"
+        },
+        {
+          "rank": 11,
+          "number": "762",
+          "score": 4.5636,
+          "sum": 15,
+          "span": 5,
+          "selection_note": "constraint_sample_diversified"
+        },
+        {
+          "rank": 12,
+          "number": "263",
+          "score": 4.5349,
+          "sum": 11,
+          "span": 4,
+          "selection_note": "constraint_sample_diversified"
+        },
+        {
+          "rank": 13,
+          "number": "532",
+          "score": 4.0435,
+          "sum": 10,
+          "span": 3,
+          "selection_note": "constraint_sample_diversified"
+        },
+        {
+          "rank": 14,
+          "number": "760",
+          "score": 4.0084,
+          "sum": 13,
+          "span": 7,
+          "selection_note": "constraint_sample_diversified"
+        },
+        {
+          "rank": 15,
+          "number": "044",
+          "score": 3.5522,
+          "sum": 8,
+          "span": 4,
+          "selection_note": "constraint_sample_diversified"
+        },
+        {
+          "rank": 16,
+          "number": "466",
+          "score": 3.1662,
+          "sum": 16,
+          "span": 2,
+          "selection_note": "constraint_sample_diversified"
+        },
+        {
+          "rank": 17,
+          "number": "143",
+          "score": 3.581,
+          "sum": 8,
+          "span": 3,
+          "selection_note": "constraint_sample_diversified"
+        },
+        {
+          "rank": 18,
+          "number": "836",
+          "score": 3.1311,
+          "sum": 17,
+          "span": 5,
+          "selection_note": "constraint_sample_diversified"
+        },
+        {
+          "rank": 19,
+          "number": "530",
+          "score": 3.4884,
+          "sum": 8,
+          "span": 5,
+          "selection_note": "constraint_sample_diversified"
+        },
+        {
+          "rank": 20,
+          "number": "943",
+          "score": 3.096,
+          "sum": 16,
+          "span": 6,
+          "selection_note": "constraint_sample_diversified"
+        }
+      ],
+      "top3": [
+        {
+          "rank": 1,
+          "number": "062",
+          "score": 6.5163,
+          "sum": 8,
+          "span": 6,
+          "selection_note": "constraint_sample_diversified"
+        },
+        {
+          "rank": 2,
+          "number": "163",
+          "score": 4.956,
+          "sum": 10,
+          "span": 5,
+          "selection_note": "constraint_sample_diversified"
+        },
+        {
+          "rank": 3,
+          "number": "053",
+          "score": 5.055,
+          "sum": 8,
+          "span": 5,
+          "selection_note": "constraint_sample_diversified"
+        }
+      ],
+      "note": "随机开奖不可预测，本结果仅用于统计记录和复盘。"
+    },
+    "plw": {
+      "name": "中国体育彩票 排列五",
+      "source": "https://touch.17500.cn/award/history/lotid/pl5.html",
+      "history_count": 220,
+      "latest_issue": "2026317",
+      "latest_date": "2026-11-27",
+      "latest_number": "55348",
+      "method": "V2",
+      "trend_summary": {
+        "recent_window": 30,
+        "sum_avg": 21.7,
+        "sum_last": 25,
+        "span_avg": 6.7,
+        "span_last": 5,
+        "mod3_distribution": {
+          "0路": "42%",
+          "1路": "32%",
+          "2路": "26%"
+        }
+      },
+      "candidates": [
+        {
+          "rank": 1,
+          "number": "00347",
+          "score": 0.0956,
+          "sum": 14,
+          "span": 7,
+          "selection_note": "constraint_sample_diversified"
+        },
+        {
+          "rank": 2,
+          "number": "39961",
+          "score": 0.025,
+          "sum": 28,
+          "span": 8,
+          "selection_note": "constraint_sample_diversified"
+        },
+        {
+          "rank": 3,
+          "number": "75613",
+          "score": 0.0234,
+          "sum": 22,
+          "span": 6,
+          "selection_note": "constraint_sample_diversified"
+        },
+        {
+          "rank": 4,
+          "number": "54374",
+          "score": 0.0339,
+          "sum": 23,
+          "span": 4,
+          "selection_note": "constraint_sample_diversified"
+        },
+        {
+          "rank": 5,
+          "number": "36032",
+          "score": 0.0442,
+          "sum": 14,
+          "span": 6,
+          "selection_note": "constraint_sample_diversified"
+        },
+        {
+          "rank": 6,
+          "number": "47249",
+          "score": 0.0497,
+          "sum": 26,
+          "span": 7,
+          "selection_note": "constraint_sample_diversified"
+        },
+        {
+          "rank": 7,
+          "number": "11881",
+          "score": 0.023,
+          "sum": 19,
+          "span": 7,
+          "selection_note": "constraint_sample_diversified"
+        },
+        {
+          "rank": 8,
+          "number": "96124",
+          "score": 0.0347,
+          "sum": 22,
+          "span": 8,
+          "selection_note": "constraint_sample_diversified"
+        },
+        {
+          "rank": 9,
+          "number": "86383",
+          "score": 0.0586,
+          "sum": 28,
+          "span": 5,
+          "selection_note": "constraint_sample_diversified"
+        },
+        {
+          "rank": 10,
+          "number": "43807",
+          "score": 0.0532,
+          "sum": 22,
+          "span": 8,
+          "selection_note": "constraint_sample_diversified"
+        },
+        {
+          "rank": 11,
+          "number": "04138",
+          "score": 0.0374,
+          "sum": 16,
+          "span": 8,
+          "selection_note": "constraint_sample_diversified"
+        },
+        {
+          "rank": 12,
+          "number": "52467",
+          "score": 0.0394,
+          "sum": 24,
+          "span": 5,
+          "selection_note": "constraint_sample_diversified"
+        },
+        {
+          "rank": 13,
+          "number": "13478",
+          "score": 0.0323,
+          "sum": 23,
+          "span": 7,
+          "selection_note": "constraint_sample_diversified"
+        },
+        {
+          "rank": 14,
+          "number": "31656",
+          "score": 0.0148,
+          "sum": 21,
+          "span": 5,
+          "selection_note": "constraint_sample_diversified"
+        },
+        {
+          "rank": 15,
+          "number": "42273",
+          "score": 0.0333,
+          "sum": 18,
+          "span": 5,
+          "selection_note": "constraint_sample_diversified"
+        },
+        {
+          "rank": 16,
+          "number": "78141",
+          "score": 0.0394,
+          "sum": 21,
+          "span": 7,
+          "selection_note": "constraint_sample_diversified"
+        },
+        {
+          "rank": 17,
+          "number": "38870",
+          "score": 0.0182,
+          "sum": 26,
+          "span": 8,
+          "selection_note": "constraint_sample_diversified"
+        },
+        {
+          "rank": 18,
+          "number": "12057",
+          "score": 0.0517,
+          "sum": 15,
+          "span": 7,
+          "selection_note": "constraint_sample_diversified"
+        },
+        {
+          "rank": 19,
+          "number": "29238",
+          "score": 0.0302,
+          "sum": 24,
+          "span": 7,
+          "selection_note": "constraint_sample_diversified"
+        },
+        {
+          "rank": 20,
+          "number": "34219",
+          "score": 0.0336,
+          "sum": 19,
+          "span": 8,
+          "selection_note": "constraint_sample_diversified"
+        }
+      ],
+      "top3": [
+        {
+          "rank": 1,
+          "number": "00347",
+          "score": 0.0956,
+          "sum": 14,
+          "span": 7,
+          "selection_note": "constraint_sample_diversified"
+        },
+        {
+          "rank": 2,
+          "number": "39961",
+          "score": 0.025,
+          "sum": 28,
+          "span": 8,
+          "selection_note": "constraint_sample_diversified"
+        },
+        {
+          "rank": 3,
+          "number": "75613",
+          "score": 0.0234,
+          "sum": 22,
+          "span": 6,
+          "selection_note": "constraint_sample_diversified"
+        }
+      ],
+      "note": "随机开奖不可预测，本结果仅用于统计记录和复盘。"
+    }
+  }
+}
